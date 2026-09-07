@@ -1,7 +1,7 @@
 """Compare the actual compiled robot interfaces and mesh outputs; no hardware claims."""
 from pathlib import Path
 import json,os
-os.environ.setdefault('MUJOCO_GL','egl')
+os.environ.setdefault('MUJOCO_GL','disable')
 import mujoco,numpy as np,trimesh
 import xml.etree.ElementTree as ET
 ROOT=Path(__file__).resolve().parents[1]
