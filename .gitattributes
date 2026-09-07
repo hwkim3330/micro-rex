@@ -1,0 +1,9 @@
+*.stl binary
+*.glb binary
+*.png binary
+*.pdf binary
+# Keep machine-generated STEP and upstream snapshots byte-for-byte.
+*.step -whitespace
+vendor/** -whitespace
+web/vendor/** -whitespace
+licenses/*.txt -whitespace

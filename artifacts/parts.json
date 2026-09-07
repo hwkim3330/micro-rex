@@ -1,0 +1,434 @@
+[
+  {
+    "name": "skull_cheek_left",
+    "parent": "jaw_soft",
+    "material": "PLA estimate, density 1.24 g/cm3",
+    "mass_g": 9.539,
+    "dimensions_mm": [
+      140.0,
+      2.0,
+      55.0
+    ],
+    "bounds_mm": [
+      [
+        -21.0,
+        44.0,
+        229.0
+      ],
+      [
+        119.0,
+        46.0,
+        284.0
+      ]
+    ],
+    "watertight": true,
+    "solids": 1,
+    "stl": "models/parts/skull_cheek_left.stl",
+    "step": "models/step/skull_cheek_left.step"
+  },
+  {
+    "name": "teeth_left",
+    "parent": "jaw_soft",
+    "material": "PLA estimate, density 1.24 g/cm3",
+    "mass_g": 0.828,
+    "dimensions_mm": [
+      50.0,
+      2.0,
+      13.0
+    ],
+    "bounds_mm": [
+      [
+        63.0,
+        46.0,
+        237.0
+      ],
+      [
+        113.0,
+        48.0,
+        250.0
+      ]
+    ],
+    "watertight": true,
+    "solids": 1,
+    "stl": "models/parts/teeth_left.stl",
+    "step": "models/step/teeth_left.step"
+  },
+  {
+    "name": "brow_left",
+    "parent": "jaw_soft",
+    "material": "PLA estimate, density 1.24 g/cm3",
+    "mass_g": 0.158,
+    "dimensions_mm": [
+      18.0,
+      1.5,
+      5.988
+    ],
+    "bounds_mm": [
+      [
+        20.00018310546875,
+        46.0,
+        271.00469970703125
+      ],
+      [
+        38.0,
+        47.5,
+        276.9930725097656
+      ]
+    ],
+    "watertight": true,
+    "solids": 1,
+    "stl": "models/parts/brow_left.stl",
+    "step": "models/step/brow_left.step"
+  },
+  {
+    "name": "skull_cheek_right",
+    "parent": "jaw_soft",
+    "material": "PLA estimate, density 1.24 g/cm3",
+    "mass_g": 9.539,
+    "dimensions_mm": [
+      140.0,
+      2.0,
+      55.0
+    ],
+    "bounds_mm": [
+      [
+        -21.0,
+        -46.0,
+        229.0
+      ],
+      [
+        119.0,
+        -44.0,
+        284.0
+      ]
+    ],
+    "watertight": true,
+    "solids": 1,
+    "stl": "models/parts/skull_cheek_right.stl",
+    "step": "models/step/skull_cheek_right.step"
+  },
+  {
+    "name": "teeth_right",
+    "parent": "jaw_soft",
+    "material": "PLA estimate, density 1.24 g/cm3",
+    "mass_g": 0.828,
+    "dimensions_mm": [
+      50.0,
+      2.0,
+      13.0
+    ],
+    "bounds_mm": [
+      [
+        63.0,
+        -48.0,
+        237.0
+      ],
+      [
+        113.0,
+        -46.0,
+        250.0
+      ]
+    ],
+    "watertight": true,
+    "solids": 1,
+    "stl": "models/parts/teeth_right.stl",
+    "step": "models/step/teeth_right.step"
+  },
+  {
+    "name": "brow_right",
+    "parent": "jaw_soft",
+    "material": "PLA estimate, density 1.24 g/cm3",
+    "mass_g": 0.158,
+    "dimensions_mm": [
+      18.0,
+      1.5,
+      5.988
+    ],
+    "bounds_mm": [
+      [
+        20.00018310546875,
+        -47.5,
+        271.00469970703125
+      ],
+      [
+        38.0,
+        -46.0,
+        276.9930725097656
+      ]
+    ],
+    "watertight": true,
+    "solids": 1,
+    "stl": "models/parts/brow_right.stl",
+    "step": "models/step/brow_right.step"
+  },
+  {
+    "name": "head_bridge_1",
+    "parent": "jaw_soft",
+    "material": "PLA estimate, density 1.24 g/cm3",
+    "mass_g": 3.544,
+    "dimensions_mm": [
+      7.0,
+      92.0,
+      8.0
+    ],
+    "bounds_mm": [
+      [
+        -9.5,
+        -46.0,
+        276.0
+      ],
+      [
+        -2.5,
+        46.0,
+        284.0
+      ]
+    ],
+    "watertight": true,
+    "solids": 1,
+    "stl": "models/parts/head_bridge_1.stl",
+    "step": "models/step/head_bridge_1.step"
+  },
+  {
+    "name": "head_bridge_2",
+    "parent": "jaw_soft",
+    "material": "PLA estimate, density 1.24 g/cm3",
+    "mass_g": 3.544,
+    "dimensions_mm": [
+      7.0,
+      92.0,
+      8.0
+    ],
+    "bounds_mm": [
+      [
+        32.5,
+        -46.0,
+        278.0
+      ],
+      [
+        39.5,
+        46.0,
+        286.0
+      ]
+    ],
+    "watertight": true,
+    "solids": 1,
+    "stl": "models/parts/head_bridge_2.stl",
+    "step": "models/step/head_bridge_2.step"
+  },
+  {
+    "name": "tail_segment_1",
+    "parent": "trunk_base",
+    "material": "PLA estimate, density 1.24 g/cm3",
+    "mass_g": 5.107,
+    "dimensions_mm": [
+      48.611,
+      22.0,
+      22.932
+    ],
+    "bounds_mm": [
+      [
+        -99.67839813232422,
+        -11.0,
+        138.0396270751953
+      ],
+      [
+        -51.067203521728516,
+        11.0,
+        160.97119140625
+      ]
+    ],
+    "watertight": true,
+    "solids": 1,
+    "stl": "models/parts/tail_segment_1.stl",
+    "step": "models/step/tail_segment_1.step"
+  },
+  {
+    "name": "tail_segment_2",
+    "parent": "trunk_base",
+    "material": "PLA estimate, density 1.24 g/cm3",
+    "mass_g": 3.28,
+    "dimensions_mm": [
+      47.78,
+      16.0,
+      29.089
+    ],
+    "bounds_mm": [
+      [
+        -143.83828735351562,
+        -8.0,
+        145.56031799316406
+      ],
+      [
+        -96.05873107910156,
+        8.0,
+        174.64981079101562
+      ]
+    ],
+    "watertight": true,
+    "solids": 1,
+    "stl": "models/parts/tail_segment_2.stl",
+    "step": "models/step/tail_segment_2.step"
+  },
+  {
+    "name": "tail_segment_3",
+    "parent": "trunk_base",
+    "material": "PLA estimate, density 1.24 g/cm3",
+    "mass_g": 1.376,
+    "dimensions_mm": [
+      40.859,
+      10.0,
+      23.39
+    ],
+    "bounds_mm": [
+      [
+        -180.8167266845703,
+        -5.0,
+        165.4359130859375
+      ],
+      [
+        -139.9581756591797,
+        5.0,
+        188.8256378173828
+      ]
+    ],
+    "watertight": true,
+    "solids": 1,
+    "stl": "models/parts/tail_segment_3.stl",
+    "step": "models/step/tail_segment_3.step"
+  },
+  {
+    "name": "tail_saddle",
+    "parent": "trunk_base",
+    "material": "PLA estimate, density 1.24 g/cm3",
+    "mass_g": 3.415,
+    "dimensions_mm": [
+      3.0,
+      34.0,
+      30.0
+    ],
+    "bounds_mm": [
+      [
+        -51.0,
+        -17.0,
+        129.0
+      ],
+      [
+        -48.0,
+        17.0,
+        159.0
+      ]
+    ],
+    "watertight": true,
+    "solids": 1,
+    "stl": "models/parts/tail_saddle.stl",
+    "step": "models/step/tail_saddle.step"
+  },
+  {
+    "name": "forearm_left",
+    "parent": "trunk_base",
+    "material": "PLA estimate, density 1.24 g/cm3",
+    "mass_g": 1.529,
+    "dimensions_mm": [
+      42.0,
+      3.0,
+      23.0
+    ],
+    "bounds_mm": [
+      [
+        4.0,
+        36.0,
+        154.0
+      ],
+      [
+        46.0,
+        39.0,
+        177.0
+      ]
+    ],
+    "watertight": true,
+    "solids": 1,
+    "stl": "models/parts/forearm_left.stl",
+    "step": "models/step/forearm_left.step"
+  },
+  {
+    "name": "arm_standoff_left",
+    "parent": "trunk_base",
+    "material": "PLA estimate, density 1.24 g/cm3",
+    "mass_g": 1.655,
+    "dimensions_mm": [
+      10.0,
+      10.0,
+      15.0
+    ],
+    "bounds_mm": [
+      [
+        5.0,
+        26.0,
+        160.5
+      ],
+      [
+        15.0,
+        36.0,
+        175.5
+      ]
+    ],
+    "watertight": true,
+    "solids": 1,
+    "stl": "models/parts/arm_standoff_left.stl",
+    "step": "models/step/arm_standoff_left.step"
+  },
+  {
+    "name": "forearm_right",
+    "parent": "trunk_base",
+    "material": "PLA estimate, density 1.24 g/cm3",
+    "mass_g": 1.529,
+    "dimensions_mm": [
+      42.0,
+      3.0,
+      23.0
+    ],
+    "bounds_mm": [
+      [
+        4.0,
+        -39.0,
+        154.0
+      ],
+      [
+        46.0,
+        -36.0,
+        177.0
+      ]
+    ],
+    "watertight": true,
+    "solids": 1,
+    "stl": "models/parts/forearm_right.stl",
+    "step": "models/step/forearm_right.step"
+  },
+  {
+    "name": "arm_standoff_right",
+    "parent": "trunk_base",
+    "material": "PLA estimate, density 1.24 g/cm3",
+    "mass_g": 1.655,
+    "dimensions_mm": [
+      10.0,
+      10.0,
+      15.0
+    ],
+    "bounds_mm": [
+      [
+        5.0,
+        -36.0,
+        160.5
+      ],
+      [
+        15.0,
+        -26.0,
+        175.5
+      ]
+    ],
+    "watertight": true,
+    "solids": 1,
+    "stl": "models/parts/arm_standoff_right.stl",
+    "step": "models/step/arm_standoff_right.step"
+  }
+]

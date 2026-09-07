@@ -1,0 +1,18 @@
+{
+  "microduck": {
+    "url": "https://github.com/pollen-robotics/microduck",
+    "commit": "bc41fb5c9a9b39894669c1e022e375cf83800382"
+  },
+  "microduck_rl": {
+    "url": "https://github.com/pollen-robotics/microduck_rl",
+    "commit": "2b25a48b08f1f17bc38c90bb03144c81fbd9ed07"
+  },
+  "microduck-replica": {
+    "url": "https://github.com/fanhao375/microduck-replica",
+    "commit": "73e2118dc0b5bf463ab7d422e5274c29adfd9ea7"
+  },
+  "elec_RPI_Robot_HAT": {
+    "url": "https://github.com/pollen-robotics/elec_RPI_Robot_HAT",
+    "commit": "23eab11927f95ceca0dfa35bf182caeb7db39ea0"
+  }
+}

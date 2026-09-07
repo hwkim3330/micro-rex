@@ -1,0 +1,9 @@
+Micro Rex is a mixed-license project.
+
+New software: Apache License 2.0 (full text in licenses/UPSTREAM_APACHE-2.0.txt).
+New hardware design and derivative models/drawings: CC BY-NC-SA 4.0,
+subject to the original Microduck hardware terms.
+Vendored Microduck hardware assets: original upstream CC BY-SA-NC terms retained.
+Vendored Three.js: MIT (web/vendor/three/LICENSE).
+
+See licenses/HARDWARE.md and NOTICE for scope and attribution.

@@ -1,0 +1,30 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MICRO REX — Microduck-compatible T-rex</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#0d181b;color:#e4efe9;font:15px system-ui,sans-serif}header{padding:28px 5vw;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #30413f}h1{margin:0;font-size:28px;letter-spacing:.15em}header span{color:#f2a24a;font-size:12px}main{display:grid;grid-template-columns:minmax(0,1fr) 340px;min-height:78vh}#view{position:relative;min-height:68vh;touch-action:none}canvas{display:block;width:100%;height:100%}aside{padding:34px 25px;border-left:1px solid #30413f}h2{font-size:24px;line-height:1.4}p{line-height:1.8;color:#9fb7b0}a{color:#f0b55e}button,.download{display:block;border:1px solid #44665b;padding:13px 16px;background:#16322a;color:#e6efe9;text-decoration:none;border-radius:8px;margin:10px 0;width:100%;text-align:left;cursor:pointer}.hint{position:absolute;bottom:18px;left:24px;font-size:12px;color:#a8bab5}.tag{font-size:12px;color:#edaa5a}.stat{padding:13px 0;border-bottom:1px solid #30413f;display:flex;justify-content:space-between}footer{padding:22px 5vw;border-top:1px solid #30413f;color:#94aaa3;font-size:12px}#status{position:absolute;top:24px;left:24px;max-width:80%;background:#0d181bba;padding:8px} @media(max-width:800px){main{display:block}#view{height:58vh;min-height:380px}aside{border-left:0;border-top:1px solid #30413f}header{padding:20px}h1{font-size:23px}}
+</style>
+<header><h1>MICRO REX<span style="display:block;margin-top:8px;letter-spacing:.08em">SMALL ROBOT. PREHISTORIC PERSONALITY.</span></h1><span>DESIGN PROTOTYPE / REV A</span></header>
+<main><section id="view" aria-label="회전 가능한 마이크로 렉스 3D 모델"><div id="status">3D 모델을 불러오는 중…</div><div class="hint">드래그 회전 · 휠 확대 · 두 손가락 이동</div></section><aside>
+<div class="tag">MICRODUCK → MICRO REX</div><h2>작은 티렉스.<br>익숙한 로봇의 구조.</h2><p>원본 다리와 목의 제어 인터페이스를 유지하고, 수정 가능한 공룡 외장을 더했습니다.</p>
+<div class="stat"><span>제어 관절</span><b>14 / 원본 순서 유지</b></div><div class="stat"><span>출력 부품</span><b id="part-count">—</b></div><div class="stat"><span>예상 추가 질량</span><b id="mass">—</b></div>
+<button id="explode">부품 분해해서 보기</button><button id="stock">원본 부품 숨기기</button><button id="rotate">자동 회전 켜기</button>
+<a class="download" href="../drawings/Micro_Rex_Drawings.pdf">치수 도면 PDF ↗</a><a class="download" href="../models/micro_rex_retrofit.step">수정 가능한 STEP ↓</a><a class="download" href="../models/micro_rex.glb">조립 모델 GLB ↓</a><a href="https://github.com/hwkim3330/micro-rex">GitHub · 전체 파일 및 검증 결과 ↗</a>
+<p style="font-size:12px">실물 조립과 보행 정책은 아직 검증 전입니다. 제어 규격 보존과 실제 하드웨어 호환은 구분합니다.</p></aside></main>
+<footer>Independent remix by hwkim3330 · Based on Pollen Robotics Microduck · Hardware derivatives: upstream CC BY-SA-NC terms · <a href="../artifacts/validation.json">검증 보고서</a></footer>
+<script type="importmap">{"imports":{"three":"./vendor/three/build/three.module.js"}}</script>
+<script type="module">
+import * as THREE from 'three';import {OrbitControls} from './vendor/three/controls/OrbitControls.js';import {GLTFLoader} from './vendor/three/loaders/GLTFLoader.js';
+const el=document.querySelector('#view'),status=document.querySelector('#status');
+const scene=new THREE.Scene();scene.background=new THREE.Color('#0d181b');const camera=new THREE.PerspectiveCamera(35,1,.001,10);camera.position.set(.48,.35,.55);
+const renderer=new THREE.WebGLRenderer({antialias:true});renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.outputColorSpace=THREE.SRGBColorSpace;el.append(renderer.domElement);
+const controls=new OrbitControls(camera,renderer.domElement);controls.target.set(-.02,.15,0);controls.enableDamping=true;
+scene.add(new THREE.HemisphereLight(0xdfffee,0x283036,2.7));const light=new THREE.DirectionalLight(0xffe2b5,3);light.position.set(1,2,1);scene.add(light);
+const grid=new THREE.GridHelper(1,20,0x33564b,0x1b302c);scene.add(grid);
+let model,expanded=false,hideStock=false;const items=[];
+new GLTFLoader().load('../models/micro_rex.glb',g=>{model=g.scene;model.rotation.x=-Math.PI/2;scene.add(model);model.traverse(o=>{if(o.isMesh){o.userData.base=o.position.clone();items.push(o)}});status.textContent='';status.hidden=true;window.microRexLoaded=true;},undefined,e=>{status.textContent='모델을 열 수 없습니다. 저장소의 GLB 파일을 확인해 주세요.';console.error(e)});
+document.querySelector('#explode').onclick=e=>{expanded=!expanded;items.forEach((o,i)=>{o.position.copy(o.userData.base);if(expanded&&!o.name.startsWith('stock_')){const box=new THREE.Box3().setFromObject(o);const c=box.getCenter(new THREE.Vector3());o.position.x+=c.x<0?-.06:.05;o.position.y+=(i%2?1:-1)*.065;o.position.z+=.025;}});e.target.textContent=expanded?'조립 상태로 보기':'부품 분해해서 보기';};
+document.querySelector('#stock').onclick=e=>{hideStock=!hideStock;items.forEach(o=>{if(o.name.startsWith('stock_'))o.visible=!hideStock;});e.target.textContent=hideStock?'원본 부품 보이기':'원본 부품 숨기기';};
+document.querySelector('#rotate').onclick=e=>{controls.autoRotate=!controls.autoRotate;e.target.textContent=controls.autoRotate?'자동 회전 끄기':'자동 회전 켜기';};
+new ResizeObserver(()=>{const w=el.clientWidth,h=el.clientHeight;renderer.setSize(w,h);camera.aspect=w/h;camera.updateProjectionMatrix();}).observe(el);
+Promise.all([fetch('../artifacts/parts.json').then(r=>r.json()),fetch('../artifacts/validation.json').then(r=>r.json())]).then(([p,v])=>{document.querySelector('#part-count').textContent=p.length+'개';document.querySelector('#mass').textContent=v.added_mass_g.toFixed(1)+' g';}).catch(console.error);
+function frame(){requestAnimationFrame(frame);controls.update();renderer.render(scene,camera)}frame();
+</script></html>

@@ -1,0 +1,8 @@
+<mujoco model="Micro Rex prototype scene">
+  <include file="micro_rex.xml"/>
+  <visual><global azimuth="135" elevation="-15"/><headlight ambient=".3 .3 .3"/></visual>
+  <worldbody>
+    <light pos=".5 -.5 1" dir="-.3 .3 -1"/>
+    <geom name="floor" type="plane" size="2 2 .01" rgba=".12 .17 .19 1"/>
+  </worldbody>
+</mujoco>

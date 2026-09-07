@@ -1,0 +1,6 @@
+cadquery==2.8.0
+mujoco==3.4.0
+trimesh==4.11.1
+numpy>=2,<3
+Pillow>=10
+reportlab>=4

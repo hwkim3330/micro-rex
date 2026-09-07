@@ -1,0 +1,15 @@
+{
+  "name": "micro-rex-viewer",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "three": "0.180.0"
+  },
+  "devDependencies": {
+    "puppeteer": "25.10.0"
+  },
+  "scripts": {
+    "test:viewer": "node tools/test-viewer.mjs",
+    "serve": "python3 -m http.server 5190 --bind 127.0.0.1"
+  }
+}
