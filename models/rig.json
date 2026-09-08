@@ -1,0 +1,858 @@
+{
+  "bodies": [
+    {
+      "id": 1,
+      "parent": 0,
+      "name": "trunk_base",
+      "position": [
+        0.0,
+        0.0,
+        0.12
+      ],
+      "quaternion": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "joints": []
+    },
+    {
+      "id": 2,
+      "parent": 1,
+      "name": "yaw2roll",
+      "position": [
+        0.006,
+        0.0175,
+        -0.005
+      ],
+      "quaternion": [
+        0.0,
+        -0.7071067811865475,
+        -0.7071067811865475,
+        -0.0
+      ],
+      "joints": [
+        {
+          "name": "left_hip_yaw",
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "pivot": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "range": [
+            -0.4363323129985824,
+            0.5235987755982988
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "parent": 2,
+      "name": "hip_l",
+      "position": [
+        0.0,
+        0.0165,
+        0.0125
+      ],
+      "quaternion": [
+        0.7071067811865475,
+        -0.7071067811865475,
+        0.0,
+        -0.0
+      ],
+      "joints": [
+        {
+          "name": "left_hip_roll",
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "pivot": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "range": [
+            -0.3839724354386992,
+            0.38397243543880577
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "parent": 3,
+      "name": "upper_leg_left",
+      "position": [
+        0.025,
+        0.0,
+        -0.0185
+      ],
+      "quaternion": [
+        0.5,
+        -0.5,
+        0.5,
+        -0.5
+      ],
+      "joints": [
+        {
+          "name": "left_hip_pitch",
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "pivot": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "range": [
+            -1.570796326794949,
+            1.5707963267948442
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "parent": 4,
+      "name": "leg",
+      "position": [
+        0.022,
+        0.0357771,
+        -0.004
+      ],
+      "quaternion": [
+        0.0,
+        0.7071067811865475,
+        0.7071067811865475,
+        0.0
+      ],
+      "joints": [
+        {
+          "name": "left_knee",
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "pivot": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "range": [
+            -1.5707963267948983,
+            1.5707963267948948
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "parent": 5,
+      "name": "ankle_left",
+      "position": [
+        -0.0,
+        0.042,
+        -0.026
+      ],
+      "quaternion": [
+        0.0,
+        -1.0,
+        -0.0,
+        0.0
+      ],
+      "joints": [
+        {
+          "name": "left_ankle",
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "pivot": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "range": [
+            -1.5707963267949063,
+            1.5707963267948868
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "parent": 1,
+      "name": "neck",
+      "position": [
+        0.026,
+        0.0145,
+        0.0324215
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        0.7071067811865475,
+        -0.7071067811865475
+      ],
+      "joints": [
+        {
+          "name": "neck_pitch",
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "pivot": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "range": [
+            -1.5707963267948974,
+            1.0471975511965967
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "parent": 7,
+      "name": "neck_pitch",
+      "position": [
+        -0.0,
+        -0.05,
+        0.0
+      ],
+      "quaternion": [
+        0.0,
+        1.0,
+        -0.0,
+        -0.0
+      ],
+      "joints": [
+        {
+          "name": "head_pitch",
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "pivot": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "range": [
+            -1.5707963267948966,
+            1.5707963267948966
+          ]
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "parent": 8,
+      "name": "yaw_roll_motion",
+      "position": [
+        -0.0,
+        0.0186931,
+        -0.0145
+      ],
+      "quaternion": [
+        0.0,
+        -0.0,
+        -0.7071067811865475,
+        -0.7071067811865475
+      ],
+      "joints": [
+        {
+          "name": "head_yaw",
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "pivot": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "range": [
+            -2.9670597283903613,
+            2.9670597283903595
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "parent": 9,
+      "name": "jaw_soft",
+      "position": [
+        -0.0179,
+        0.0,
+        0.0145
+      ],
+      "quaternion": [
+        0.7071067811865475,
+        0.0,
+        -0.7071067811865475,
+        -0.0
+      ],
+      "joints": [
+        {
+          "name": "head_roll",
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "pivot": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "range": [
+            -0.43633231299858327,
+            0.4363323129985815
+          ]
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "parent": 1,
+      "name": "bearing_roll",
+      "position": [
+        0.006,
+        -0.0175,
+        -0.005
+      ],
+      "quaternion": [
+        0.0,
+        -0.7071067811865475,
+        -0.7071067811865475,
+        0.0
+      ],
+      "joints": [
+        {
+          "name": "right_hip_yaw",
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "pivot": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "range": [
+            -0.523598775598297,
+            0.43633231299858416
+          ]
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "parent": 11,
+      "name": "hip_l_2",
+      "position": [
+        -0.0,
+        0.0165,
+        0.0125
+      ],
+      "quaternion": [
+        0.0,
+        0.0,
+        0.7071067811865475,
+        0.7071067811865475
+      ],
+      "joints": [
+        {
+          "name": "right_hip_roll",
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "pivot": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "range": [
+            -0.3839724354387507,
+            0.38397243543875426
+          ]
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "parent": 12,
+      "name": "upper_leg_right",
+      "position": [
+        0.025,
+        0.0,
+        -0.0185
+      ],
+      "quaternion": [
+        0.5,
+        -0.5,
+        0.5,
+        -0.5
+      ],
+      "joints": [
+        {
+          "name": "right_hip_pitch",
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "pivot": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "range": [
+            -1.57079632679494,
+            1.570796326794853
+          ]
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "parent": 13,
+      "name": "leg_2",
+      "position": [
+        -0.022,
+        0.0357771,
+        -0.004
+      ],
+      "quaternion": [
+        0.0,
+        1.0,
+        -0.0,
+        -0.0
+      ],
+      "joints": [
+        {
+          "name": "right_knee",
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "pivot": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "range": [
+            -1.5707963267949339,
+            1.5707963267948593
+          ]
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "parent": 14,
+      "name": "ankle_right",
+      "position": [
+        -0.042,
+        0.0,
+        -0.026
+      ],
+      "quaternion": [
+        0.0,
+        -0.7071067811865475,
+        -0.7071067811865475,
+        0.0
+      ],
+      "joints": [
+        {
+          "name": "right_ankle",
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "pivot": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "range": [
+            -1.5707963267949028,
+            1.5707963267948903
+          ]
+        }
+      ]
+    }
+  ],
+  "meshes": {
+    "stock_0": {
+      "body": 1,
+      "label": "seeed_bearing__configuration__22x16x4"
+    },
+    "stock_1": {
+      "body": 1,
+      "label": "right_shell"
+    },
+    "stock_2": {
+      "body": 1,
+      "label": "banana_pcb_locker"
+    },
+    "stock_3": {
+      "body": 1,
+      "label": "trunk_base"
+    },
+    "stock_4": {
+      "body": 1,
+      "label": "xl330"
+    },
+    "stock_5": {
+      "body": 1,
+      "label": "power_support"
+    },
+    "stock_7": {
+      "body": 1,
+      "label": "np_f970"
+    },
+    "stock_8": {
+      "body": 1,
+      "label": "xl330"
+    },
+    "stock_9": {
+      "body": 1,
+      "label": "left_shell"
+    },
+    "stock_10": {
+      "body": 1,
+      "label": "seeed_bearing__configuration__22x16x4"
+    },
+    "stock_11": {
+      "body": 2,
+      "label": "yaw2roll"
+    },
+    "stock_12": {
+      "body": 2,
+      "label": "xl330"
+    },
+    "stock_13": {
+      "body": 2,
+      "label": "seeed_bearing__configuration__22x16x4"
+    },
+    "stock_14": {
+      "body": 2,
+      "label": "bearing_roll"
+    },
+    "stock_15": {
+      "body": 3,
+      "label": "seeed_bearing__configuration__22x16x4"
+    },
+    "stock_16": {
+      "body": 3,
+      "label": "hip_l"
+    },
+    "stock_17": {
+      "body": 4,
+      "label": "upper_leg_left"
+    },
+    "stock_18": {
+      "body": 4,
+      "label": "xl330"
+    },
+    "stock_19": {
+      "body": 4,
+      "label": "upper_leg_rigidity_plate"
+    },
+    "stock_20": {
+      "body": 4,
+      "label": "seeed_bearing__configuration__22x16x4"
+    },
+    "stock_21": {
+      "body": 4,
+      "label": "xl330"
+    },
+    "stock_22": {
+      "body": 5,
+      "label": "leg"
+    },
+    "stock_24": {
+      "body": 5,
+      "label": "xl330"
+    },
+    "stock_25": {
+      "body": 6,
+      "label": "sole_left"
+    },
+    "stock_27": {
+      "body": 6,
+      "label": "foot_left"
+    },
+    "stock_28": {
+      "body": 6,
+      "label": "seeed_bearing__configuration_default"
+    },
+    "stock_29": {
+      "body": 6,
+      "label": "ankle_left"
+    },
+    "stock_30": {
+      "body": 7,
+      "label": "neck"
+    },
+    "stock_31": {
+      "body": 7,
+      "label": "xl330"
+    },
+    "stock_32": {
+      "body": 7,
+      "label": "xl330"
+    },
+    "stock_33": {
+      "body": 7,
+      "label": "neck"
+    },
+    "stock_34": {
+      "body": 8,
+      "label": "neck_pitch"
+    },
+    "stock_35": {
+      "body": 8,
+      "label": "seeed_bearing__configuration__22x16x4"
+    },
+    "stock_36": {
+      "body": 9,
+      "label": "yaw_roll_motion"
+    },
+    "stock_37": {
+      "body": 9,
+      "label": "xl330"
+    },
+    "stock_38": {
+      "body": 9,
+      "label": "seeed_bearing__configuration__22x16x4"
+    },
+    "stock_39": {
+      "body": 9,
+      "label": "seeed_bearing__configuration__22x16x4"
+    },
+    "stock_40": {
+      "body": 10,
+      "label": "lens"
+    },
+    "stock_41": {
+      "body": 10,
+      "label": "face_part"
+    },
+    "stock_42": {
+      "body": 10,
+      "label": "xl330"
+    },
+    "stock_43": {
+      "body": 10,
+      "label": "jaw_soft"
+    },
+    "stock_44": {
+      "body": 10,
+      "label": "motor_support"
+    },
+    "stock_45": {
+      "body": 10,
+      "label": "top_head_shell"
+    },
+    "stock_46": {
+      "body": 10,
+      "label": "xl330"
+    },
+    "stock_47": {
+      "body": 10,
+      "label": "seeed_bearing__configuration_default"
+    },
+    "stock_48": {
+      "body": 10,
+      "label": "elec_rpi_robot_hat_pcb"
+    },
+    "stock_49": {
+      "body": 10,
+      "label": "soft_mouth_top"
+    },
+    "stock_50": {
+      "body": 10,
+      "label": "noenoeil"
+    },
+    "stock_51": {
+      "body": 10,
+      "label": "jaw"
+    },
+    "stock_52": {
+      "body": 10,
+      "label": "bottom_head_shell"
+    },
+    "stock_53": {
+      "body": 10,
+      "label": "m12_lens_holder"
+    },
+    "stock_54": {
+      "body": 10,
+      "label": "pcb__raspberry_pi_zero_2_w"
+    },
+    "stock_55": {
+      "body": 10,
+      "label": "speaker"
+    },
+    "stock_56": {
+      "body": 11,
+      "label": "yaw2roll"
+    },
+    "stock_57": {
+      "body": 11,
+      "label": "xl330"
+    },
+    "stock_58": {
+      "body": 11,
+      "label": "bearing_roll"
+    },
+    "stock_59": {
+      "body": 11,
+      "label": "seeed_bearing__configuration__22x16x4"
+    },
+    "stock_60": {
+      "body": 12,
+      "label": "hip_l"
+    },
+    "stock_61": {
+      "body": 12,
+      "label": "seeed_bearing__configuration__22x16x4"
+    },
+    "stock_62": {
+      "body": 13,
+      "label": "xl330"
+    },
+    "stock_63": {
+      "body": 13,
+      "label": "seeed_bearing__configuration__22x16x4"
+    },
+    "stock_64": {
+      "body": 13,
+      "label": "upper_leg_rigidity_plate"
+    },
+    "stock_65": {
+      "body": 13,
+      "label": "upper_leg_right"
+    },
+    "stock_66": {
+      "body": 13,
+      "label": "xl330"
+    },
+    "stock_67": {
+      "body": 14,
+      "label": "xl330"
+    },
+    "stock_68": {
+      "body": 14,
+      "label": "leg"
+    },
+    "stock_70": {
+      "body": 15,
+      "label": "ankle_right"
+    },
+    "stock_71": {
+      "body": 15,
+      "label": "sole_right"
+    },
+    "stock_73": {
+      "body": 15,
+      "label": "seeed_bearing__configuration_default"
+    },
+    "stock_74": {
+      "body": 15,
+      "label": "foot_right"
+    },
+    "skull_cheek_left": {
+      "body": 10,
+      "label": "skull_cheek_left"
+    },
+    "teeth_left": {
+      "body": 10,
+      "label": "teeth_left"
+    },
+    "brow_left": {
+      "body": 10,
+      "label": "brow_left"
+    },
+    "skull_cheek_right": {
+      "body": 10,
+      "label": "skull_cheek_right"
+    },
+    "teeth_right": {
+      "body": 10,
+      "label": "teeth_right"
+    },
+    "brow_right": {
+      "body": 10,
+      "label": "brow_right"
+    },
+    "head_bridge_1": {
+      "body": 10,
+      "label": "head_bridge_1"
+    },
+    "head_bridge_2": {
+      "body": 10,
+      "label": "head_bridge_2"
+    },
+    "tail_segment_1": {
+      "body": 1,
+      "label": "tail_segment_1"
+    },
+    "tail_segment_2": {
+      "body": 1,
+      "label": "tail_segment_2"
+    },
+    "tail_segment_3": {
+      "body": 1,
+      "label": "tail_segment_3"
+    },
+    "tail_saddle": {
+      "body": 1,
+      "label": "tail_saddle"
+    },
+    "forearm_left": {
+      "body": 1,
+      "label": "forearm_left"
+    },
+    "arm_standoff_left": {
+      "body": 1,
+      "label": "arm_standoff_left"
+    },
+    "forearm_right": {
+      "body": 1,
+      "label": "forearm_right"
+    },
+    "arm_standoff_right": {
+      "body": 1,
+      "label": "arm_standoff_right"
+    }
+  },
+  "mode": "kinematic; no physics or collision enforcement"
+}

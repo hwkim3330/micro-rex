@@ -88,3 +88,9 @@ python -m http.server 5190
 - Three.js: MIT.
 
 [자세한 출처·라이선스](licenses/HARDWARE.md). 상업 사용을 허용하는 하드웨어 패키지가 아닙니다.
+
+### 공개 웹 제작실
+
+[GitHub Pages](https://hwkim3330.github.io/micro-rex/)에서 14개 관절 자세 조절, 부품 선택 및 치수 확인, 조립·분해 보기, 원본 부품 표시 전환, 카메라 방향 선택과 PNG 저장을 제공합니다. 부품 표에서 출력용 mm STL과 STEP을 내려받을 수 있습니다. PC와 모바일 레이아웃을 제공합니다.
+
+브라우저 관절 데이터는 `python tools/export_rig.py`로 원본 MJCF에서 생성합니다. 이 화면은 충돌이나 균형을 계산하지 않는 **기구학 시연**입니다. 현재 공개 CAD는 Rev A 외장 시제품이며, 완성형 티렉스 기구 및 실물 제작 검증 완료를 의미하지 않습니다.

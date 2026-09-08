@@ -1,4 +1,6 @@
 {
+  "drawings/Micro_Rex_Drawings.pdf": "0b5274fbeeb91c27a0efd844aead63aba099183afd6a11130c6dec6c7fb3dbbd",
+  "drawings/retrofit_bom.csv": "620ae7810ff7191ec0e2f81f2796f37867e68d2b534ab8e9f8a723742b494b1b",
   "models/micro_rex.glb": "3b4ba80498668dd99f01db1231b66e5b647a9f90fe1a946d999176c9e6595015",
   "models/micro_rex.xml": "2921b8dcb6847411a1858228fb1edeec5183165b7633e2c4eda31a8c65132263",
   "models/micro_rex_retrofit.step": "6cdce29695fa759a57cab3393413bcf9554b5c74ec458d5a70f40f8f5e431eae",
@@ -52,6 +54,7 @@
   "models/print/tail_segment_3.stl": "bcbc86207cc525581d9f24d40865a4b683678bcbed770d0e542c17430dc454cb",
   "models/print/teeth_left.stl": "2c62563cd410ccfdef480292114f328af3f6cb4c05a2a2047a0a6030f038d7e8",
   "models/print/teeth_right.stl": "2c62563cd410ccfdef480292114f328af3f6cb4c05a2a2047a0a6030f038d7e8",
+  "models/rig.json": "13aba6b5589a0bd9c661b144aecc4b5bb2af04d81801241184aa688ab80bc97d",
   "models/scene.xml": "eba22bbaeed102dacf92365bc5c719e22816fea6fdc864059fd0373e5b2c28f9",
   "models/step/arm_standoff_left.step": "9c1118174aa79388d66eca748dab5350d358c964f332fd1d956c495e4bf3a05f",
   "models/step/arm_standoff_right.step": "9b8a2a5d38465dee19cd740a5d185a795a1fe8c370a8a2009f47a6c63cde43e4",
@@ -69,7 +72,5 @@
   "models/step/tail_segment_2.step": "48af4e6616ce1b17c656fb3833b409e74e63bc878b1a0f0572ce51026c680e7d",
   "models/step/tail_segment_3.step": "41d4373729e65037dc88c01efbe0a3e48e66fab4ea378996a2452d7c61cefa2b",
   "models/step/teeth_left.step": "9c507478d29fcb5390be85bcd1792d6adb7e506d5d0339451277ee2e2fb393d7",
-  "models/step/teeth_right.step": "30cd5a521b349a7077f5607a6c75da88a7d49ee3d33dbfa3723e03bbc2b4ea4c",
-  "drawings/Micro_Rex_Drawings.pdf": "0b5274fbeeb91c27a0efd844aead63aba099183afd6a11130c6dec6c7fb3dbbd",
-  "drawings/retrofit_bom.csv": "620ae7810ff7191ec0e2f81f2796f37867e68d2b534ab8e9f8a723742b494b1b"
+  "models/step/teeth_right.step": "30cd5a521b349a7077f5607a6c75da88a7d49ee3d33dbfa3723e03bbc2b4ea4c"
 }

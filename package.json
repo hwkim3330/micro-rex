@@ -10,6 +10,7 @@
   },
   "scripts": {
     "test:viewer": "node tools/test-viewer.mjs",
-    "serve": "python3 -m http.server 5190 --bind 127.0.0.1"
+    "serve": "python3 -m http.server 5190 --bind 127.0.0.1",
+    "test:rig": "node tools/test-rig.mjs"
   }
 }
