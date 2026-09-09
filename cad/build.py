@@ -20,12 +20,12 @@ def add(name,shape,body,color):
     parts.append({'name':name,'body':body,'color':color,'shape':shape,'mesh':mesh,'mass_kg':mass})
     return shape
 jade=[0.16,0.48,0.37,1];gold=[1,0.51,0.12,1];ivory=[0.94,0.89,0.71,1];dark=[0.08,0.14,0.15,1]
-# Open skeletal cheeks retain the stock head/camera module. Two identical profiles mirrored.
-profile=[(-20,232),(-21,264),(-8,281),(35,284),(75,275),(114,259),(119,248),(109,244),(75,250),(57,244),(34,229)]
+# Rounded removable cheek covers follow the original head rather than extending its skeleton.
+profile=[(-20,251),(-16,271),(0,282),(36,284),(65,279),(88,266),(98,251),(86,245),(64,247),(45,239),(13,233),(-11,236)]
 for side,y in [('left',46),('right',-44)]:
-    shape=cq.Workplane('XZ',origin=(0,y,0)).polyline(profile).close().extrude(2)
+    shape=cq.Workplane('XZ',origin=(0,y,0)).spline(profile,periodic=True).close().extrude(2)
     # Fenestration lightens the head and exposes stock shells for access.
-    for x,z,rx,rz in [(8,253,17,16),(50,263,16,8)]:
+    for x,z,rx,rz in [(-5,252,8,10),(68,263,13,6)]:
         cut=cq.Workplane('XZ',origin=(x,y+1,z)).ellipse(rx,rz).extrude(4)
         shape=shape.cut(cut)
     # M2 clearance; independent cross ties support the cheeks above the stock shell.
@@ -33,19 +33,20 @@ for side,y in [('left',46),('right',-44)]:
         shape=shape.cut(cq.Workplane('XZ',origin=(x,y+1,z)).circle(1.2).extrude(4))
     add('skull_cheek_'+side,shape,'jaw_soft',jade)
     # Separate blunt teeth rail, safely rounded triangular design, not functional biting.
-    points=[(63,250),(113,250),(107,240),(103,245),(98,238),(94,245),(87,237),(82,245),(76,239),(72,247)]
-    add('teeth_'+side,cq.Workplane('XZ',origin=(0,48 if side=='left' else -46,0)).polyline(points).close().extrude(2),'jaw_soft',ivory)
+    points=[(61,249),(96,249),(90,241),(85,246),(78,240),(72,246),(65,242)]
+    add('teeth_'+side,cq.Workplane('XZ',origin=(0,48 if side=='left' else -46,0)).polyline(points).close().extrude(2).edges('|Y').fillet(.7),'jaw_soft',ivory)
     sign=1 if side=='left' else -1
-    eye=cq.Workplane('XZ',origin=(29,47.5 if sign==1 else -46,274)).ellipse(9,3).extrude(1.5)
-    add('brow_'+side,eye,'jaw_soft',gold)
+    eye=cq.Workplane('XY').sphere(13).translate((29,sign*40,265))
+    eye=eye.intersect(cq.Workplane('XY').box(40,8,40).translate((29,sign*49,265)))
+    add('brow_'+side,eye,'jaw_soft',ivory) # retained part ID; now a convex eye finish carrier
 # Roof bridges are open underneath; end bosses carry cheek screws.
 for index,(x,z) in enumerate([(-6,278),(36,280)]):
-    bridge=cq.Workplane('XY').box(7,92,4).translate((x,0,z+4))
+    bridge=cq.Workplane('XY').box(7,92,4).edges('|Z').fillet(2).translate((x,0,z+4))
     for y in [-41,41]:
         boss=cq.Workplane('XY').box(7,6,8).translate((x,y,z+2))
         hole=cq.Workplane('XZ',origin=(x,y+5,z)).circle(1.2).extrude(10)
         bridge=bridge.union(boss).cut(hole)
-    add('head_bridge_'+str(index+1),bridge,'jaw_soft',gold)
+    add('head_bridge_'+str(index+1),bridge,'jaw_soft',jade)
 # Three hollow tail segments: shallow sockets can be tuned in a CAD editor.
 anchors=[(-52,0,149,11),(-99,0,153,8),(-142,0,170,5),(-180,0,187,2)]
 for i in range(3):
@@ -53,7 +54,7 @@ for i in range(3):
     r0=anchors[i][3];r1=anchors[i+1][3]
     outer=cq.Solid.makeCone(r0,r1,length,cq.Vector(*a),cq.Vector(*v))
     inner=cq.Solid.makeCone(max(0.6,r0-1.6),max(0.5,r1-1.6),length+0.1,cq.Vector(*a),cq.Vector(*v))
-    add('tail_segment_'+str(i+1),cq.Workplane(obj=outer.cut(inner)),'trunk_base',jade if i!=1 else gold)
+    add('tail_segment_'+str(i+1),cq.Workplane(obj=outer.cut(inner)),'trunk_base',jade)
 # Strap-mounted tail saddle: slotted, no unverified stock screw pattern assumed.
 saddle=cq.Workplane('YZ',origin=(-51,0,144)).rect(34,30).extrude(3)
 for y in [-12,12]:
@@ -90,7 +91,19 @@ for p in parts:
     ET.SubElement(body,'geom',name='rex_'+p['name'],type='mesh',mesh=p['name'],**{'class':'visual','rgba':' '.join(map(str,p['color'])),'mass':'0'})
     # Account for additive mass and inertia; stock inertial values remain in aggregate.
     bm.setdefault(p['body'],[]).append((p['mass_kg'],local))
-    world=p['mesh'].copy();world.vertices*=0.001;world.visual.vertex_colors=(np.array(p['color'])*255).astype(np.uint8)
+    world=p['mesh'].copy()
+    colors=np.tile((np.array(p['color'])*255).astype(np.uint8),(len(world.vertices),1))
+    if p['name'].startswith('brow_'):
+        x,y,z=world.vertices.T;sgn=1 if p['name'].endswith('left') else -1
+        pupil=(sgn*y>46)&(((x-31)/8.5)**2+((z-265)/10)**2<1)
+        colors[pupil]=[15,32,29,255]
+        glint=pupil&(((x-28)/2.8)**2+((z-269)/3)**2<1)
+        colors[glint]=[255,253,239,255]
+        # A painted black pupil approximation for the MuJoCo visual renderer.
+        # Zero mass/collision; finish does not add a mechanical component.
+        point=(np.array([31,sgn*51.9,265])*.001-t)@R
+        ET.SubElement(body,'geom',name='finish_'+p['name'],type='sphere',pos=' '.join(map(str,point)),size='.006',rgba='.04 .08 .07 1',mass='0',contype='0',conaffinity='0',group='2')
+    world.vertices*=0.001;world.visual.vertex_colors=colors
     scene.add_geometry(world,node_name=p['name'])
 # Combine inertias in body coordinates using parallel axis theorem.
 for body_name,added in bm.items():

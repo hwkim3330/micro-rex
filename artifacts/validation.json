@@ -1,13 +1,18 @@
 {
-  "checks_passed": 49,
+  "checks_passed": 60,
   "checks": [
     "Same configuration, velocity and control dimensions",
     "Preserved names and order: mjOBJ_JOINT",
     "Preserved names and order: mjOBJ_ACTUATOR",
     "Preserved names and order: mjOBJ_SENSOR",
+    "Preserved body_parentid",
+    "Preserved body_pos",
+    "Preserved body_quat",
     "Preserved jnt_range",
     "Preserved jnt_axis",
     "Preserved jnt_pos",
+    "Preserved jnt_qposadr",
+    "Preserved jnt_dofadr",
     "Preserved actuator_trnid",
     "Preserved actuator_ctrlrange",
     "Preserved actuator_forcerange",
@@ -49,7 +54,13 @@
     "Editable STEP exists: arm_standoff_right",
     "Added mass is included in dynamics",
     "microduck: 3 s finite CPU dynamics",
-    "micro_rex: 3 s finite CPU dynamics"
+    "micro_rex: 3 s finite CPU dynamics",
+    "Current policy test model vendor/microduck/robot_walk.xml",
+    "Current policy test model models/micro_rex.xml",
+    "Policy replay dimensions microduck",
+    "Policy replay finite microduck",
+    "Policy replay dimensions micro_rex",
+    "Policy replay finite micro_rex"
   ],
   "nq": 21,
   "nv": 20,
@@ -67,19 +78,20 @@
       "upright_3s": false
     },
     "micro_rex": {
-      "mass_kg": 0.7849267430416751,
+      "mass_kg": 0.7900151177113268,
       "reference_com_m": [
-        0.0016065454208592294,
-        -1.280500741217943e-05,
-        0.15070471243395417
+        0.0015205698901630401,
+        -1.2720471323688876e-05,
+        0.15149519605894515
       ],
-      "hold_3s_trunk_z_m": 0.06453688170497376,
-      "hold_3s_tilt_deg": 71.61129843623286,
+      "hold_3s_trunk_z_m": 0.043723286341349275,
+      "hold_3s_tilt_deg": 80.37048685432136,
       "upright_3s": false
     }
   },
-  "added_mass_g": 47.6835630416752,
+  "added_mass_g": 52.771937711326935,
   "hardware_fit": "UNVERIFIED",
-  "policy_performance": "NOT VALIDATED; 14-action ABI preservation does not prove policy or sim-to-real compatibility",
-  "manufacturing": "Prototype CAD; physical fit, tolerances and fasteners require validation"
+  "policy_performance": "Scoped ONNX/BAM simulation results in policy_evaluation.json; command tracking and hardware compatibility are not established",
+  "manufacturing": "Prototype CAD; physical fit, tolerances and fasteners require validation",
+  "policy_simulation_report": "artifacts/policy_evaluation.json"
 }

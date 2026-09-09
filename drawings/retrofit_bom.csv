@@ -1,12 +1,12 @@
 part,qty,material_estimate,mass_g,STL,STEP
-skull_cheek_left,1,"PLA estimate, density 1.24 g/cm3",9.539,models/parts/skull_cheek_left.stl,models/step/skull_cheek_left.step
-teeth_left,1,"PLA estimate, density 1.24 g/cm3",0.828,models/parts/teeth_left.stl,models/step/teeth_left.step
-brow_left,1,"PLA estimate, density 1.24 g/cm3",0.158,models/parts/brow_left.stl,models/step/brow_left.step
-skull_cheek_right,1,"PLA estimate, density 1.24 g/cm3",9.539,models/parts/skull_cheek_right.stl,models/step/skull_cheek_right.step
-teeth_right,1,"PLA estimate, density 1.24 g/cm3",0.828,models/parts/teeth_right.stl,models/step/teeth_right.step
-brow_right,1,"PLA estimate, density 1.24 g/cm3",0.158,models/parts/brow_right.stl,models/step/brow_right.step
-head_bridge_1,1,"PLA estimate, density 1.24 g/cm3",3.544,models/parts/head_bridge_1.stl,models/step/head_bridge_1.step
-head_bridge_2,1,"PLA estimate, density 1.24 g/cm3",3.544,models/parts/head_bridge_2.stl,models/step/head_bridge_2.step
+skull_cheek_left,1,"PLA estimate, density 1.24 g/cm3",10.07,models/parts/skull_cheek_left.stl,models/step/skull_cheek_left.step
+teeth_left,1,"PLA estimate, density 1.24 g/cm3",0.44,models/parts/teeth_left.stl,models/step/teeth_left.step
+brow_left,1,"PLA estimate, density 1.24 g/cm3",2.576,models/parts/brow_left.stl,models/step/brow_left.step
+skull_cheek_right,1,"PLA estimate, density 1.24 g/cm3",10.07,models/parts/skull_cheek_right.stl,models/step/skull_cheek_right.step
+teeth_right,1,"PLA estimate, density 1.24 g/cm3",0.44,models/parts/teeth_right.stl,models/step/teeth_right.step
+brow_right,1,"PLA estimate, density 1.24 g/cm3",2.576,models/parts/brow_right.stl,models/step/brow_right.step
+head_bridge_1,1,"PLA estimate, density 1.24 g/cm3",3.527,models/parts/head_bridge_1.stl,models/step/head_bridge_1.step
+head_bridge_2,1,"PLA estimate, density 1.24 g/cm3",3.527,models/parts/head_bridge_2.stl,models/step/head_bridge_2.step
 tail_segment_1,1,"PLA estimate, density 1.24 g/cm3",5.107,models/parts/tail_segment_1.stl,models/step/tail_segment_1.step
 tail_segment_2,1,"PLA estimate, density 1.24 g/cm3",3.28,models/parts/tail_segment_2.stl,models/step/tail_segment_2.step
 tail_segment_3,1,"PLA estimate, density 1.24 g/cm3",1.376,models/parts/tail_segment_3.stl,models/step/tail_segment_3.step

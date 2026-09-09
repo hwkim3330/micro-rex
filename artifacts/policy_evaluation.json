@@ -1,0 +1,531 @@
+{
+  "source_revision": "088524a64e2557dc453256b6071dbb9d23888802",
+  "weight_sha256": "e36332d383997d51401897734cd3e79cf5038406feddb18b4d57ecfb141daa6c",
+  "inference_source_sha256": "bfeb91fb477490c932754eb7726207697628629229b9495fde1f56232acb1b45",
+  "actuator_model": "upstream BAM M6 XL330, kp_fw=200, vin=7.4, sag_gain=0.1, no firmware current limiter",
+  "observation": "61D; upstream projected gravity, joint-relative HOME and command layout",
+  "control_hz": 50,
+  "physics_hz": 200,
+  "protocol": "Same seeds; zero, 0.1 and 0.3 m/s forward, 0.3 rad/s turn commands. Fall = tilt >45 degrees or height <65 mm; fixed flat floor, no hardware. Command tracking reported separately from upright status.",
+  "results": {
+    "microduck": [
+      {
+        "seed": 0,
+        "velocity_command": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration_s": 10,
+        "mass_kg": 0.7372431799999999,
+        "max_tilt_deg": 0.89,
+        "min_trunk_height_m": 0.1147,
+        "final_xy_m": [
+          0.0022,
+          0.0001
+        ],
+        "mean_world_vx_m_s": 0.0002,
+        "final_yaw_deg": -0.29,
+        "first_fall_s": null,
+        "upright_entire_trial": true,
+        "finite": true
+      },
+      {
+        "seed": 1,
+        "velocity_command": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration_s": 10,
+        "mass_kg": 0.7372431799999999,
+        "max_tilt_deg": 0.85,
+        "min_trunk_height_m": 0.1147,
+        "final_xy_m": [
+          0.002,
+          0.0002
+        ],
+        "mean_world_vx_m_s": 0.0002,
+        "final_yaw_deg": -0.22,
+        "first_fall_s": null,
+        "upright_entire_trial": true,
+        "finite": true
+      },
+      {
+        "seed": 2,
+        "velocity_command": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration_s": 10,
+        "mass_kg": 0.7372431799999999,
+        "max_tilt_deg": 0.89,
+        "min_trunk_height_m": 0.1149,
+        "final_xy_m": [
+          0.0019,
+          0.0002
+        ],
+        "mean_world_vx_m_s": 0.0002,
+        "final_yaw_deg": -0.26,
+        "first_fall_s": null,
+        "upright_entire_trial": true,
+        "finite": true
+      },
+      {
+        "seed": 0,
+        "velocity_command": [
+          0.1,
+          0.0,
+          0.0
+        ],
+        "duration_s": 10,
+        "mass_kg": 0.7372431799999999,
+        "max_tilt_deg": 0.88,
+        "min_trunk_height_m": 0.1145,
+        "final_xy_m": [
+          0.0059,
+          0.0014
+        ],
+        "mean_world_vx_m_s": 0.0006,
+        "final_yaw_deg": -0.24,
+        "first_fall_s": null,
+        "upright_entire_trial": true,
+        "finite": true
+      },
+      {
+        "seed": 1,
+        "velocity_command": [
+          0.1,
+          0.0,
+          0.0
+        ],
+        "duration_s": 10,
+        "mass_kg": 0.7372431799999999,
+        "max_tilt_deg": 0.91,
+        "min_trunk_height_m": 0.1145,
+        "final_xy_m": [
+          0.0058,
+          0.0015
+        ],
+        "mean_world_vx_m_s": 0.0006,
+        "final_yaw_deg": -0.33,
+        "first_fall_s": null,
+        "upright_entire_trial": true,
+        "finite": true
+      },
+      {
+        "seed": 2,
+        "velocity_command": [
+          0.1,
+          0.0,
+          0.0
+        ],
+        "duration_s": 10,
+        "mass_kg": 0.7372431799999999,
+        "max_tilt_deg": 0.92,
+        "min_trunk_height_m": 0.1146,
+        "final_xy_m": [
+          0.0058,
+          0.0017
+        ],
+        "mean_world_vx_m_s": 0.0006,
+        "final_yaw_deg": -0.32,
+        "first_fall_s": null,
+        "upright_entire_trial": true,
+        "finite": true
+      },
+      {
+        "seed": 0,
+        "velocity_command": [
+          0.3,
+          0.0,
+          0.0
+        ],
+        "duration_s": 10,
+        "mass_kg": 0.7372431799999999,
+        "max_tilt_deg": 3.8,
+        "min_trunk_height_m": 0.1128,
+        "final_xy_m": [
+          0.9662,
+          -0.2809
+        ],
+        "mean_world_vx_m_s": 0.0966,
+        "final_yaw_deg": -31.47,
+        "first_fall_s": null,
+        "upright_entire_trial": true,
+        "finite": true
+      },
+      {
+        "seed": 1,
+        "velocity_command": [
+          0.3,
+          0.0,
+          0.0
+        ],
+        "duration_s": 10,
+        "mass_kg": 0.7372431799999999,
+        "max_tilt_deg": 3.68,
+        "min_trunk_height_m": 0.1128,
+        "final_xy_m": [
+          0.9733,
+          -0.2439
+        ],
+        "mean_world_vx_m_s": 0.0973,
+        "final_yaw_deg": -22.18,
+        "first_fall_s": null,
+        "upright_entire_trial": true,
+        "finite": true
+      },
+      {
+        "seed": 2,
+        "velocity_command": [
+          0.3,
+          0.0,
+          0.0
+        ],
+        "duration_s": 10,
+        "mass_kg": 0.7372431799999999,
+        "max_tilt_deg": 3.93,
+        "min_trunk_height_m": 0.1129,
+        "final_xy_m": [
+          0.9847,
+          -0.1525
+        ],
+        "mean_world_vx_m_s": 0.0985,
+        "final_yaw_deg": -21.42,
+        "first_fall_s": null,
+        "upright_entire_trial": true,
+        "finite": true
+      },
+      {
+        "seed": 0,
+        "velocity_command": [
+          0.0,
+          0.0,
+          0.3
+        ],
+        "duration_s": 10,
+        "mass_kg": 0.7372431799999999,
+        "max_tilt_deg": 0.74,
+        "min_trunk_height_m": 0.1145,
+        "final_xy_m": [
+          0.0045,
+          0.003
+        ],
+        "mean_world_vx_m_s": 0.0005,
+        "final_yaw_deg": 3.24,
+        "first_fall_s": null,
+        "upright_entire_trial": true,
+        "finite": true
+      },
+      {
+        "seed": 1,
+        "velocity_command": [
+          0.0,
+          0.0,
+          0.3
+        ],
+        "duration_s": 10,
+        "mass_kg": 0.7372431799999999,
+        "max_tilt_deg": 0.83,
+        "min_trunk_height_m": 0.1147,
+        "final_xy_m": [
+          0.0045,
+          0.003
+        ],
+        "mean_world_vx_m_s": 0.0004,
+        "final_yaw_deg": 3.21,
+        "first_fall_s": null,
+        "upright_entire_trial": true,
+        "finite": true
+      },
+      {
+        "seed": 2,
+        "velocity_command": [
+          0.0,
+          0.0,
+          0.3
+        ],
+        "duration_s": 10,
+        "mass_kg": 0.7372431799999999,
+        "max_tilt_deg": 0.86,
+        "min_trunk_height_m": 0.1148,
+        "final_xy_m": [
+          0.0043,
+          0.003
+        ],
+        "mean_world_vx_m_s": 0.0004,
+        "final_yaw_deg": 3.06,
+        "first_fall_s": null,
+        "upright_entire_trial": true,
+        "finite": true
+      }
+    ],
+    "micro_rex": [
+      {
+        "seed": 0,
+        "velocity_command": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration_s": 10,
+        "mass_kg": 0.7900151177113268,
+        "max_tilt_deg": 0.87,
+        "min_trunk_height_m": 0.1147,
+        "final_xy_m": [
+          0.0021,
+          0.0001
+        ],
+        "mean_world_vx_m_s": 0.0002,
+        "final_yaw_deg": -0.34,
+        "first_fall_s": null,
+        "upright_entire_trial": true,
+        "finite": true
+      },
+      {
+        "seed": 1,
+        "velocity_command": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration_s": 10,
+        "mass_kg": 0.7900151177113268,
+        "max_tilt_deg": 0.8,
+        "min_trunk_height_m": 0.1147,
+        "final_xy_m": [
+          0.002,
+          0.0002
+        ],
+        "mean_world_vx_m_s": 0.0002,
+        "final_yaw_deg": -0.25,
+        "first_fall_s": null,
+        "upright_entire_trial": true,
+        "finite": true
+      },
+      {
+        "seed": 2,
+        "velocity_command": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration_s": 10,
+        "mass_kg": 0.7900151177113268,
+        "max_tilt_deg": 0.89,
+        "min_trunk_height_m": 0.1149,
+        "final_xy_m": [
+          0.0019,
+          0.0003
+        ],
+        "mean_world_vx_m_s": 0.0002,
+        "final_yaw_deg": -0.34,
+        "first_fall_s": null,
+        "upright_entire_trial": true,
+        "finite": true
+      },
+      {
+        "seed": 0,
+        "velocity_command": [
+          0.1,
+          0.0,
+          0.0
+        ],
+        "duration_s": 10,
+        "mass_kg": 0.7900151177113268,
+        "max_tilt_deg": 0.85,
+        "min_trunk_height_m": 0.1145,
+        "final_xy_m": [
+          0.006,
+          0.0027
+        ],
+        "mean_world_vx_m_s": 0.0006,
+        "final_yaw_deg": -0.26,
+        "first_fall_s": null,
+        "upright_entire_trial": true,
+        "finite": true
+      },
+      {
+        "seed": 1,
+        "velocity_command": [
+          0.1,
+          0.0,
+          0.0
+        ],
+        "duration_s": 10,
+        "mass_kg": 0.7900151177113268,
+        "max_tilt_deg": 0.88,
+        "min_trunk_height_m": 0.1145,
+        "final_xy_m": [
+          0.0059,
+          0.0027
+        ],
+        "mean_world_vx_m_s": 0.0006,
+        "final_yaw_deg": -0.35,
+        "first_fall_s": null,
+        "upright_entire_trial": true,
+        "finite": true
+      },
+      {
+        "seed": 2,
+        "velocity_command": [
+          0.1,
+          0.0,
+          0.0
+        ],
+        "duration_s": 10,
+        "mass_kg": 0.7900151177113268,
+        "max_tilt_deg": 0.89,
+        "min_trunk_height_m": 0.1146,
+        "final_xy_m": [
+          0.0059,
+          0.0027
+        ],
+        "mean_world_vx_m_s": 0.0006,
+        "final_yaw_deg": -0.47,
+        "first_fall_s": null,
+        "upright_entire_trial": true,
+        "finite": true
+      },
+      {
+        "seed": 0,
+        "velocity_command": [
+          0.3,
+          0.0,
+          0.0
+        ],
+        "duration_s": 10,
+        "mass_kg": 0.7900151177113268,
+        "max_tilt_deg": 4.29,
+        "min_trunk_height_m": 0.1124,
+        "final_xy_m": [
+          1.0174,
+          -0.3251
+        ],
+        "mean_world_vx_m_s": 0.1017,
+        "final_yaw_deg": -31.96,
+        "first_fall_s": null,
+        "upright_entire_trial": true,
+        "finite": true
+      },
+      {
+        "seed": 1,
+        "velocity_command": [
+          0.3,
+          0.0,
+          0.0
+        ],
+        "duration_s": 10,
+        "mass_kg": 0.7900151177113268,
+        "max_tilt_deg": 4.31,
+        "min_trunk_height_m": 0.1125,
+        "final_xy_m": [
+          1.0092,
+          -0.3487
+        ],
+        "mean_world_vx_m_s": 0.1009,
+        "final_yaw_deg": -34.07,
+        "first_fall_s": null,
+        "upright_entire_trial": true,
+        "finite": true
+      },
+      {
+        "seed": 2,
+        "velocity_command": [
+          0.3,
+          0.0,
+          0.0
+        ],
+        "duration_s": 10,
+        "mass_kg": 0.7900151177113268,
+        "max_tilt_deg": 4.24,
+        "min_trunk_height_m": 0.1125,
+        "final_xy_m": [
+          1.0596,
+          -0.2371
+        ],
+        "mean_world_vx_m_s": 0.106,
+        "final_yaw_deg": -30.76,
+        "first_fall_s": null,
+        "upright_entire_trial": true,
+        "finite": true
+      },
+      {
+        "seed": 0,
+        "velocity_command": [
+          0.0,
+          0.0,
+          0.3
+        ],
+        "duration_s": 10,
+        "mass_kg": 0.7900151177113268,
+        "max_tilt_deg": 0.76,
+        "min_trunk_height_m": 0.1145,
+        "final_xy_m": [
+          0.0051,
+          0.0029
+        ],
+        "mean_world_vx_m_s": 0.0005,
+        "final_yaw_deg": 3.52,
+        "first_fall_s": null,
+        "upright_entire_trial": true,
+        "finite": true
+      },
+      {
+        "seed": 1,
+        "velocity_command": [
+          0.0,
+          0.0,
+          0.3
+        ],
+        "duration_s": 10,
+        "mass_kg": 0.7900151177113268,
+        "max_tilt_deg": 0.82,
+        "min_trunk_height_m": 0.1146,
+        "final_xy_m": [
+          0.0047,
+          0.0034
+        ],
+        "mean_world_vx_m_s": 0.0005,
+        "final_yaw_deg": 3.64,
+        "first_fall_s": null,
+        "upright_entire_trial": true,
+        "finite": true
+      },
+      {
+        "seed": 2,
+        "velocity_command": [
+          0.0,
+          0.0,
+          0.3
+        ],
+        "duration_s": 10,
+        "mass_kg": 0.7900151177113268,
+        "max_tilt_deg": 0.86,
+        "min_trunk_height_m": 0.1147,
+        "final_xy_m": [
+          0.0048,
+          0.0034
+        ],
+        "mean_world_vx_m_s": 0.0005,
+        "final_yaw_deg": 3.38,
+        "first_fall_s": null,
+        "upright_entire_trial": true,
+        "finite": true
+      }
+    ]
+  },
+  "hardware_compatibility_verified": false,
+  "limitations": [
+    "No sim-to-real validation",
+    "No varied terrain or sensor noise",
+    "Approximate retrofit collision envelopes",
+    "Finite trial duration does not establish reliable walking"
+  ],
+  "model_sha256": {
+    "vendor/microduck/robot_walk.xml": "80fc4424ed71e430ec4919110dfdb5c714dc1c4e1138e1832a16865cf31eb8c8",
+    "models/micro_rex.xml": "b1cfccabd849bbbdc536d1d43b76185e649e702b1b5b3a827511d22ac5ec733a"
+  }
+}

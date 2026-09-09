@@ -3,22 +3,22 @@
     "name": "skull_cheek_left",
     "parent": "jaw_soft",
     "material": "PLA estimate, density 1.24 g/cm3",
-    "mass_g": 9.539,
+    "mass_g": 10.07,
     "dimensions_mm": [
-      140.0,
+      118.986,
       2.0,
-      55.0
+      52.377
     ],
     "bounds_mm": [
       [
-        -21.0,
+        -20.69236946105957,
         44.0,
-        229.0
+        232.6868896484375
       ],
       [
-        119.0,
+        98.29362487792969,
         46.0,
-        284.0
+        285.06353759765625
       ]
     ],
     "watertight": true,
@@ -30,22 +30,22 @@
     "name": "teeth_left",
     "parent": "jaw_soft",
     "material": "PLA estimate, density 1.24 g/cm3",
-    "mass_g": 0.828,
+    "mass_g": 0.44,
     "dimensions_mm": [
-      50.0,
+      33.794,
       2.0,
-      13.0
+      8.746
     ],
     "bounds_mm": [
       [
-        63.0,
+        61.506229400634766,
         46.0,
-        237.0
+        240.25379943847656
       ],
       [
-        113.0,
+        95.29985046386719,
         48.0,
-        250.0
+        249.0
       ]
     ],
     "watertight": true,
@@ -57,22 +57,22 @@
     "name": "brow_left",
     "parent": "jaw_soft",
     "material": "PLA estimate, density 1.24 g/cm3",
-    "mass_g": 0.158,
+    "mass_g": 2.576,
     "dimensions_mm": [
-      18.0,
-      1.5,
-      5.988
+      24.0,
+      7.983,
+      24.0
     ],
     "bounds_mm": [
       [
-        20.00018310546875,
-        46.0,
-        271.00469970703125
+        17.0,
+        45.0,
+        253.0
       ],
       [
-        38.0,
-        47.5,
-        276.9930725097656
+        41.0,
+        52.983009338378906,
+        277.0
       ]
     ],
     "watertight": true,
@@ -84,22 +84,22 @@
     "name": "skull_cheek_right",
     "parent": "jaw_soft",
     "material": "PLA estimate, density 1.24 g/cm3",
-    "mass_g": 9.539,
+    "mass_g": 10.07,
     "dimensions_mm": [
-      140.0,
+      118.986,
       2.0,
-      55.0
+      52.377
     ],
     "bounds_mm": [
       [
-        -21.0,
+        -20.69236946105957,
         -46.0,
-        229.0
+        232.6868896484375
       ],
       [
-        119.0,
+        98.29362487792969,
         -44.0,
-        284.0
+        285.06353759765625
       ]
     ],
     "watertight": true,
@@ -111,22 +111,22 @@
     "name": "teeth_right",
     "parent": "jaw_soft",
     "material": "PLA estimate, density 1.24 g/cm3",
-    "mass_g": 0.828,
+    "mass_g": 0.44,
     "dimensions_mm": [
-      50.0,
+      33.794,
       2.0,
-      13.0
+      8.746
     ],
     "bounds_mm": [
       [
-        63.0,
+        61.506229400634766,
         -48.0,
-        237.0
+        240.25379943847656
       ],
       [
-        113.0,
+        95.29985046386719,
         -46.0,
-        250.0
+        249.0
       ]
     ],
     "watertight": true,
@@ -138,22 +138,22 @@
     "name": "brow_right",
     "parent": "jaw_soft",
     "material": "PLA estimate, density 1.24 g/cm3",
-    "mass_g": 0.158,
+    "mass_g": 2.576,
     "dimensions_mm": [
-      18.0,
-      1.5,
-      5.988
+      24.0,
+      7.983,
+      24.0
     ],
     "bounds_mm": [
       [
-        20.00018310546875,
-        -47.5,
-        271.00469970703125
+        17.0,
+        -52.983009338378906,
+        253.0
       ],
       [
-        38.0,
-        -46.0,
-        276.9930725097656
+        41.0,
+        -45.0,
+        277.0
       ]
     ],
     "watertight": true,
@@ -165,7 +165,7 @@
     "name": "head_bridge_1",
     "parent": "jaw_soft",
     "material": "PLA estimate, density 1.24 g/cm3",
-    "mass_g": 3.544,
+    "mass_g": 3.527,
     "dimensions_mm": [
       7.0,
       92.0,
@@ -192,7 +192,7 @@
     "name": "head_bridge_2",
     "parent": "jaw_soft",
     "material": "PLA estimate, density 1.24 g/cm3",
-    "mass_g": 3.544,
+    "mass_g": 3.527,
     "dimensions_mm": [
       7.0,
       92.0,

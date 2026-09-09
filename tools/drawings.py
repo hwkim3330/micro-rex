@@ -14,7 +14,7 @@ def header(title,subtitle):
     c.setFont('Helvetica',11);c.drawString(35,H-66,subtitle)
     c.setFillColorRGB(.1,.15,.15)
 def footer(page):
-    c.setFont('Helvetica',9);c.drawString(35,28,'MICRO REX / Rev A / 2026-09-07 / mm / PROTOTYPE - verify fit before fabrication')
+    c.setFont('Helvetica',9);c.drawString(35,28,'MICRO REX / Rev B / 2026-09-09 / mm / PROTOTYPE - verify fit before fabrication')
     c.drawRightString(W-35,28,f'{page} / {len(parts)+1}')
 header('MICRO REX  /  ASSEMBLY REFERENCE','Microduck-compatible joint interface / independent T-rex retrofit / not factory manufacturing drawings')
 c.drawImage(str(ROOT/'artifacts/micro_rex_side.png'),35,190,width=690,height=517,preserveAspectRatio=True,mask='auto')

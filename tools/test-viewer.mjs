@@ -14,5 +14,10 @@ const moved=await page.evaluate(()=>{const j=window.microRex.jointControls.find(
 await page.click('#part-list button');assert.ok(await page.$eval('#selection',e=>e.textContent.includes('CAD STEP')));checks++;
 await page.click('#stock');assert.ok(await page.evaluate(()=>window.microRex.items.filter(m=>m.name.startsWith('stock_')).every(m=>!m.visible)));checks++;await page.click('#stock');
 await page.click('#reset');assert.ok(await page.evaluate(()=>window.microRex.jointControls.every(j=>Number(j.input.value)===0)));checks++;
+await page.click('#policy-play');await page.waitForFunction(()=>document.querySelector('#policy-play').textContent==='재생 중지');assert.ok(await page.evaluate(()=>window.microRex.jointControls.every(j=>j.input.disabled)));checks++;
+await page.waitForFunction(()=>window.microRex.jointControls.some(j=>Math.abs(Number(j.input.value))>.01));checks++;
+await page.screenshot({path:path.join(root,'artifacts',`policy_${name}.png`)});
+await page.select('#policy-model','microduck');await page.click('#policy-play');await page.waitForFunction(()=>document.querySelector('#policy-play').textContent==='재생 중지');assert.ok(await page.evaluate(()=>window.microRex.items.filter(m=>!m.name.startsWith('stock_')).every(m=>!m.visible)));checks++;
+await page.click('#reset');assert.ok(await page.evaluate(()=>window.microRex.items.every(m=>m.visible)&&window.microRex.jointControls.every(j=>!j.input.disabled&&Number(j.input.value)===0)));checks++;
 assert.deepEqual(errors,[]);checks++;await page.close();}
 console.log(`${checks} browser checks passed`);}finally{await browser.close();server.close();}

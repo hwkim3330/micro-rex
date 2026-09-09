@@ -1,0 +1,119 @@
+{
+  "repository": "pollen-robotics/microduck-policies",
+  "revision": "088524a64e2557dc453256b6071dbb9d23888802",
+  "model_card_license": "apache-2.0",
+  "files": {
+    "README.md": {
+      "url": "https://huggingface.co/pollen-robotics/microduck-policies/resolve/088524a64e2557dc453256b6071dbb9d23888802/README.md",
+      "sha256": "98b45ea81164d1e1a1dd82255207053b15cd6c69d922a1c5cf3387ce604d4b74",
+      "bytes": 28
+    },
+    "manifest.json": {
+      "url": "https://huggingface.co/pollen-robotics/microduck-policies/resolve/088524a64e2557dc453256b6071dbb9d23888802/manifest.json",
+      "sha256": "d0c36e7b71129dd617339c63bcb1d704eab282c8617ebf14c2013a01abfb2dda",
+      "bytes": 1524
+    },
+    "alpha_walking.onnx": {
+      "url": "https://huggingface.co/pollen-robotics/microduck-policies/resolve/088524a64e2557dc453256b6071dbb9d23888802/alpha_walking.onnx",
+      "sha256": "e36332d383997d51401897734cd3e79cf5038406feddb18b4d57ecfb141daa6c",
+      "bytes": 793705
+    },
+    "alpha_stand.onnx": {
+      "url": "https://huggingface.co/pollen-robotics/microduck-policies/resolve/088524a64e2557dc453256b6071dbb9d23888802/alpha_stand.onnx",
+      "sha256": "1569268713e40deea795dd2922dba50d3621e15a872855408b6b1b125b1c094b",
+      "bytes": 793705
+    }
+  },
+  "manifest": {
+    "schema_version": 2,
+    "model_api": 1,
+    "obs_len": 61,
+    "action_len": 14,
+    "robot": {
+      "model": "microduck",
+      "hw_rev": 1,
+      "servos": "xl330",
+      "control_hz": 50
+    },
+    "description": "The policy set a microduck ships with: walking, standing, and the one-shots its buttons run.",
+    "policies": [
+      {
+        "file": "alpha_walking.onnx",
+        "kind": "perpetual"
+      },
+      {
+        "file": "alpha_stand.onnx",
+        "kind": "perpetual"
+      },
+      {
+        "file": "roller.onnx",
+        "kind": "perpetual",
+        "mode": "roller",
+        "action_scale": 0.8
+      },
+      {
+        "file": "alpha_sitstand.onnx",
+        "name": "sitstand",
+        "kind": "scripted",
+        "command": {
+          "encoding": "posture_flag",
+          "slot": "twist.vx",
+          "sit": 1.0,
+          "stand": 0.0,
+          "idle": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "ramp_s": 2.0,
+        "unwind_s": 1.0
+      },
+      {
+        "file": "alpha_ground_pick.onnx",
+        "name": "ground_pick",
+        "kind": "episodic",
+        "duration_s": 2.8,
+        "command": {
+          "encoding": "phase",
+          "slots": "twist.vx,twist.vy",
+          "period_s": 4.0,
+          "end_phase": 0.7
+        }
+      },
+      {
+        "file": "roller_crouch.onnx",
+        "name": "crouch",
+        "kind": "episodic",
+        "duration_s": 3.5,
+        "mode": "roller",
+        "action_scale": 0.8,
+        "command": {
+          "encoding": "phase",
+          "slots": "twist.vx,twist.vy",
+          "period_s": 5.0,
+          "end_phase": 0.7
+        }
+      },
+      {
+        "file": "roulade.onnx",
+        "kind": "episodic",
+        "duration_s": 1.0,
+        "chain": true
+      },
+      {
+        "file": "ball_kick_left.onnx",
+        "name": "kick_left",
+        "kind": "episodic",
+        "duration_s": 0.5
+      },
+      {
+        "file": "ball_kick_right.onnx",
+        "name": "kick_right",
+        "kind": "episodic",
+        "duration_s": 0.5
+      }
+    ]
+  },
+  "note": "Weights fetched from pinned source, not modified. Hardware license is separate."
+}

@@ -138,7 +138,7 @@
             <geom type="mesh" class="visual" pos="0.018 0 0.0145" quat="0.707107 0 -0.707107 -0" mesh="seeed_bearing__configuration__22x16x4" material="seeed_bearing__configuration__22x16x4_material" />
             <body name="jaw_soft" pos="-0.0179 0 0.0145" quat="0.707107 0 -0.707107 -0">
               <joint axis="0 0 1" name="head_roll" type="hinge" range="-0.43633231299858327 0.4363323129985815" class="chosen_actuator" />
-              <inertial pos="0.007599007876364353 0.0010447428927350265 -0.03195771802736456" mass="0.21690305011481295" fullinertia="0.00040790057484313283 0.0003132652060645966 0.0002193705889113547 4.612077756481894e-08 9.251572627656329e-09 4.302239460594777e-06" />
+              <inertial pos="0.008291710731480332 0.0010208031609894761 -0.03077039314772784" mass="0.22199142478446482" fullinertia="0.00040855665483551185 0.00030560488102804914 0.00023402884697818946 2.0305789590989434e-07 -3.921260735516234e-06 4.5712991275368966e-06" />
               <geom type="mesh" class="visual" pos="0.0155 -9.13778e-05 -0.05548" quat="0.5 -0.5 0.5 -0.5" mesh="lens" material="lens_material" />
               <geom type="mesh" class="visual" pos="-0.0045 -9.13778e-05 -0.0178" quat="0.5 0.5 0.5 0.5" mesh="face_part" material="face_part_material" />
               <geom type="mesh" class="visual" pos="0.003 0.0255 -0.018" quat="0.707107 0 -0 -0.707107" mesh="xl330" material="xl330_material" />
@@ -162,18 +162,20 @@
               <site group="3" name="mouth_tip" pos="-0.00809334 -0 -0.0777383" quat="0.704015 -0 0.710185 0" />
               <geom name="rex_skull_cheek_left" type="mesh" mesh="skull_cheek_left" class="visual" rgba="0.16 0.48 0.37 1" mass="0" />
               <geom name="rex_teeth_left" type="mesh" mesh="teeth_left" class="visual" rgba="0.94 0.89 0.71 1" mass="0" />
-              <geom name="rex_brow_left" type="mesh" mesh="brow_left" class="visual" rgba="1 0.51 0.12 1" mass="0" />
+              <geom name="rex_brow_left" type="mesh" mesh="brow_left" class="visual" rgba="0.94 0.89 0.71 1" mass="0" />
+              <geom name="finish_brow_left" type="sphere" pos="0.029385400000000048 0.05189999999999998 -0.022899999999999983" size=".006" rgba=".04 .08 .07 1" mass="0" contype="0" conaffinity="0" group="2" />
               <geom name="rex_skull_cheek_right" type="mesh" mesh="skull_cheek_right" class="visual" rgba="0.16 0.48 0.37 1" mass="0" />
               <geom name="rex_teeth_right" type="mesh" mesh="teeth_right" class="visual" rgba="0.94 0.89 0.71 1" mass="0" />
-              <geom name="rex_brow_right" type="mesh" mesh="brow_right" class="visual" rgba="1 0.51 0.12 1" mass="0" />
-              <geom name="rex_head_bridge_1" type="mesh" mesh="head_bridge_1" class="visual" rgba="1 0.51 0.12 1" mass="0" />
-              <geom name="rex_head_bridge_2" type="mesh" mesh="head_bridge_2" class="visual" rgba="1 0.51 0.12 1" mass="0" />
-              <geom name="rex_collision_jaw_soft_0" type="box" pos="0.020885400000000057 0.04499999999999998 -0.04089999999999998" size="0.0275 0.0010000000000000009 0.06999999999999997" group="3" contype="1" conaffinity="1" mass="0" rgba="0.8 0.2 0.1 0.2" />
-              <geom name="rex_collision_jaw_soft_1" type="box" pos="0.007885400000000053 0.04699999999999998 -0.07989999999999996" size="0.006499999999999988 0.0010000000000000009 0.024999999999999994" group="3" contype="1" conaffinity="1" mass="0" rgba="0.8 0.2 0.1 0.2" />
-              <geom name="rex_collision_jaw_soft_2" type="box" pos="0.03838428610839849 0.04674999999999998 -0.020900091552734357" size="0.002994186401367168 0.0007500000000000007 0.008999908447265621" group="3" contype="1" conaffinity="1" mass="0" rgba="0.8 0.2 0.1 0.2" />
-              <geom name="rex_collision_jaw_soft_3" type="box" pos="0.020885400000000057 -0.04499999999999998 -0.04089999999999998" size="0.0275 0.0010000000000000009 0.06999999999999997" group="3" contype="1" conaffinity="1" mass="0" rgba="0.8 0.2 0.1 0.2" />
-              <geom name="rex_collision_jaw_soft_4" type="box" pos="0.007885400000000053 -0.04699999999999998 -0.07989999999999996" size="0.006499999999999988 0.0010000000000000009 0.024999999999999994" group="3" contype="1" conaffinity="1" mass="0" rgba="0.8 0.2 0.1 0.2" />
-              <geom name="rex_collision_jaw_soft_5" type="box" pos="0.03838428610839849 -0.04674999999999998 -0.020900091552734357" size="0.002994186401367168 0.0007500000000000007 0.008999908447265621" group="3" contype="1" conaffinity="1" mass="0" rgba="0.8 0.2 0.1 0.2" />
+              <geom name="rex_brow_right" type="mesh" mesh="brow_right" class="visual" rgba="0.94 0.89 0.71 1" mass="0" />
+              <geom name="finish_brow_right" type="sphere" pos="0.029385400000000048 -0.05189999999999998 -0.022899999999999983" size=".006" rgba=".04 .08 .07 1" mass="0" contype="0" conaffinity="0" group="2" />
+              <geom name="rex_head_bridge_1" type="mesh" mesh="head_bridge_1" class="visual" rgba="0.16 0.48 0.37 1" mass="0" />
+              <geom name="rex_head_bridge_2" type="mesh" mesh="head_bridge_2" class="visual" rgba="0.16 0.48 0.37 1" mass="0" />
+              <geom name="rex_collision_jaw_soft_0" type="box" pos="0.02326061362304691 0.04499999999999998 -0.030700627708435034" size="0.026188323974609354 0.0010000000000000009 0.0594929971694946" group="3" contype="1" conaffinity="1" mass="0" rgba="0.8 0.2 0.1 0.2" />
+              <geom name="rex_collision_jaw_soft_1" type="box" pos="0.009012299719238333 0.04699999999999998 -0.07030303993225094" size="0.004373100280761709 0.0010000000000000009 0.016896810531616197" group="3" contype="1" conaffinity="1" mass="0" rgba="0.8 0.2 0.1 0.2" />
+              <geom name="rex_collision_jaw_soft_2" type="box" pos="0.029385400000000048 0.04899150466918943 -0.020899999999999988" size="0.012000000000000004 0.003991504669189454 0.011999999999999997" group="3" contype="1" conaffinity="1" mass="0" rgba="0.8 0.2 0.1 0.2" />
+              <geom name="rex_collision_jaw_soft_3" type="box" pos="0.02326061362304691 -0.04499999999999998 -0.030700627708435034" size="0.026188323974609354 0.0010000000000000009 0.0594929971694946" group="3" contype="1" conaffinity="1" mass="0" rgba="0.8 0.2 0.1 0.2" />
+              <geom name="rex_collision_jaw_soft_4" type="box" pos="0.009012299719238333 -0.04699999999999998 -0.07030303993225094" size="0.004373100280761709 0.0010000000000000009 0.016896810531616197" group="3" contype="1" conaffinity="1" mass="0" rgba="0.8 0.2 0.1 0.2" />
+              <geom name="rex_collision_jaw_soft_5" type="box" pos="0.029385400000000048 -0.04899150466918943 -0.020899999999999988" size="0.012000000000000004 0.003991504669189454 0.011999999999999997" group="3" contype="1" conaffinity="1" mass="0" rgba="0.8 0.2 0.1 0.2" />
               <geom name="rex_collision_jaw_soft_6" type="box" pos="0.044385400000000054 0.0 0.0141" size="0.0040000000000000036 0.04599999999999998 0.003499999999999998" group="3" contype="1" conaffinity="1" mass="0" rgba="0.8 0.2 0.1 0.2" />
               <geom name="rex_collision_jaw_soft_7" type="box" pos="0.046385400000000056 0.0 -0.027899999999999984" size="0.0040000000000000036 0.04599999999999998 0.0034999999999999996" group="3" contype="1" conaffinity="1" mass="0" rgba="0.8 0.2 0.1 0.2" />
             </body>
@@ -221,7 +223,7 @@
         </body>
       </body>
       <geom name="rex_tail_segment_1" type="mesh" mesh="tail_segment_1" class="visual" rgba="0.16 0.48 0.37 1" mass="0" />
-      <geom name="rex_tail_segment_2" type="mesh" mesh="tail_segment_2" class="visual" rgba="1 0.51 0.12 1" mass="0" />
+      <geom name="rex_tail_segment_2" type="mesh" mesh="tail_segment_2" class="visual" rgba="0.16 0.48 0.37 1" mass="0" />
       <geom name="rex_tail_segment_3" type="mesh" mesh="tail_segment_3" class="visual" rgba="0.16 0.48 0.37 1" mass="0" />
       <geom name="rex_tail_saddle" type="mesh" mesh="tail_saddle" class="visual" rgba="1 0.51 0.12 1" mass="0" />
       <geom name="rex_forearm_left" type="mesh" mesh="forearm_left" class="visual" rgba="0.16 0.48 0.37 1" mass="0" />

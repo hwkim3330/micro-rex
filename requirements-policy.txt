@@ -1,0 +1,5 @@
+# Separate policy environment; CAD generation uses requirements.txt / MuJoCo 3.4.
+mujoco==3.10.0
+numpy>=2,<3
+onnxruntime==1.24.1
+better-actuator-models @ git+https://github.com/Rhoban/bam.git@62bd8ce12154340be97e06f7f41a0ca8f116d967
