@@ -1,0 +1,190 @@
+{
+  "scope": "Static common HOME and +/-15 degree head/neck poses. Nominal sole vertices within 1 mm of lowest mesh vertex; both feet assumed supported. No measured contact, ZMP, force, terrain or walking stability proof.",
+  "source_pose_sha256": "bfeb91fb477490c932754eb7726207697628629229b9495fde1f56232acb1b45",
+  "model_sha256": {
+    "vendor/microduck/robot_walk.xml": "80fc4424ed71e430ec4919110dfdb5c714dc1c4e1138e1832a16865cf31eb8c8",
+    "models/micro_rex.xml": "c120445bf2fc2899eeb3bab8ad095b0a8b117154e7941b591cc2be78ec90cfcc"
+  },
+  "home_com_shift_mm": [
+    -0.964,
+    0.001,
+    4.577
+  ],
+  "results": {
+    "microduck": [
+      {
+        "pose": "HOME",
+        "com_mm": [
+          0.561,
+          -0.014,
+          146.749
+        ],
+        "nominal_two_foot_margin_mm": 16.336
+      },
+      {
+        "pose": "neck_pitch_minus15",
+        "com_mm": [
+          8.105,
+          -0.014,
+          146.373
+        ],
+        "nominal_two_foot_margin_mm": 21.688
+      },
+      {
+        "pose": "neck_pitch_plus15",
+        "com_mm": [
+          -6.824,
+          -0.014,
+          145.159
+        ],
+        "nominal_two_foot_margin_mm": 8.951
+      },
+      {
+        "pose": "head_pitch_minus15",
+        "com_mm": [
+          -2.717,
+          -0.014,
+          147.297
+        ],
+        "nominal_two_foot_margin_mm": 13.058
+      },
+      {
+        "pose": "head_pitch_plus15",
+        "com_mm": [
+          3.585,
+          -0.014,
+          145.371
+        ],
+        "nominal_two_foot_margin_mm": 19.36
+      },
+      {
+        "pose": "head_roll_minus15",
+        "com_mm": [
+          0.561,
+          -0.329,
+          146.788
+        ],
+        "nominal_two_foot_margin_mm": 16.336
+      },
+      {
+        "pose": "head_roll_plus15",
+        "com_mm": [
+          0.561,
+          0.281,
+          146.629
+        ],
+        "nominal_two_foot_margin_mm": 16.336
+      }
+    ],
+    "micro_rex": [
+      {
+        "pose": "HOME",
+        "com_mm": [
+          -0.403,
+          -0.013,
+          151.326
+        ],
+        "nominal_two_foot_margin_mm": 15.372,
+        "assumed_10g_hardware_budget_com_mm": [
+          -0.455,
+          -0.013,
+          151.703
+        ],
+        "assumed_10g_hardware_budget_margin_mm": 15.32
+      },
+      {
+        "pose": "neck_pitch_minus15",
+        "com_mm": [
+          7.692,
+          -0.013,
+          150.969
+        ],
+        "nominal_two_foot_margin_mm": 22.101,
+        "assumed_10g_hardware_budget_com_mm": [
+          7.676,
+          -0.013,
+          151.391
+        ],
+        "assumed_10g_hardware_budget_margin_mm": 22.117
+      },
+      {
+        "pose": "neck_pitch_plus15",
+        "com_mm": [
+          -8.315,
+          -0.013,
+          149.574
+        ],
+        "nominal_two_foot_margin_mm": 7.461,
+        "assumed_10g_hardware_budget_com_mm": [
+          -8.39,
+          -0.013,
+          149.9
+        ],
+        "assumed_10g_hardware_budget_margin_mm": 7.385
+      },
+      {
+        "pose": "head_pitch_minus15",
+        "com_mm": [
+          -4.053,
+          -0.013,
+          151.793
+        ],
+        "nominal_two_foot_margin_mm": 11.722,
+        "assumed_10g_hardware_budget_com_mm": [
+          -4.109,
+          -0.013,
+          152.128
+        ],
+        "assumed_10g_hardware_budget_margin_mm": 11.666
+      },
+      {
+        "pose": "head_pitch_plus15",
+        "com_mm": [
+          3.001,
+          -0.013,
+          149.929
+        ],
+        "nominal_two_foot_margin_mm": 18.776,
+        "assumed_10g_hardware_budget_com_mm": [
+          2.965,
+          -0.013,
+          150.347
+        ],
+        "assumed_10g_hardware_budget_margin_mm": 18.74
+      },
+      {
+        "pose": "head_roll_minus15",
+        "com_mm": [
+          -0.403,
+          -0.577,
+          151.327
+        ],
+        "nominal_two_foot_margin_mm": 15.372,
+        "assumed_10g_hardware_budget_com_mm": [
+          -0.455,
+          -0.57,
+          151.705
+        ],
+        "assumed_10g_hardware_budget_margin_mm": 15.32
+      },
+      {
+        "pose": "head_roll_plus15",
+        "com_mm": [
+          -0.403,
+          0.532,
+          151.178
+        ],
+        "nominal_two_foot_margin_mm": 15.372,
+        "assumed_10g_hardware_budget_com_mm": [
+          -0.455,
+          0.525,
+          151.557
+        ],
+        "assumed_10g_hardware_budget_margin_mm": 15.32
+      }
+    ]
+  },
+  "physical_validation": false,
+  "dynamic_stability_verified": false,
+  "hardware_budget_assumption": "Additional unmeasured hardware: 5 g at jaw_soft origin plus 5 g at trunk_base origin, static sensitivity only. Not included in the standard ONNX rollout or a weighed BOM."
+}

@@ -55,6 +55,11 @@ if policy_path.exists():
         check(len(replay['joint_names'])==14 and len(replay['qpos'])==round(replay['result']['duration_s']/replay['dt']),'Policy replay dimensions '+name)
         check(np.isfinite(replay['qpos']).all() and np.array(replay['qpos']).shape[1]==21,'Policy replay finite '+name)
 files=[p for folder in ['models','cad','drawings'] for p in (ROOT/folder).rglob('*') if p.is_file() and '__pycache__' not in str(p)]
+for artifact,field in [('retention_check.json','step_sha256'),('balance_study.json','model_sha256')]:
+    path=ROOT/'artifacts'/artifact
+    if path.exists():
+        audit=json.loads(path.read_text())
+        for relative,sha in audit[field].items():check(hashlib.sha256((ROOT/relative).read_bytes()).hexdigest()==sha,'Current '+artifact+' '+relative)
 (ROOT/'artifacts/SHA256SUMS.json').write_text(json.dumps({str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(files)},indent=2)+'\n')
 report['checks_passed']=len(checks)
 (ROOT/'artifacts/validation.json').write_text(json.dumps(report,indent=2)+'\n')

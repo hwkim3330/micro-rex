@@ -5,7 +5,9 @@ ROOT=Path(__file__).resolve().parents[1];out=ROOT/'models/print';out.mkdir(exist
 parts=json.loads((ROOT/'artifacts/parts.json').read_text())
 for p in parts:
     m=trimesh.load_mesh(ROOT/p['stl'])
-    if p['name'].startswith('tail_segment'):
+    if p['name'].startswith('skull_cheek'):
+        v=[0,-1 if p['name'].endswith('left') else 1,0] # continuous outer face on bed
+    elif p['name'].startswith('tail_segment'):
         axes=[[-47,0,4],[-43,0,17],[-38,0,17]];v=axes[int(p['name'][-1])-1]
     else:
         v=np.eye(3)[int(np.argmin(m.extents))]

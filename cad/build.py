@@ -12,7 +12,7 @@ parts=[]
 def add(name,shape,body,color):
     if not shape.val().isValid(): raise ValueError(name+' invalid CAD')
     stl=ROOT/'models/parts'/f'{name}.stl';step=ROOT/'models/step'/f'{name}.step'
-    cq.exporters.export(shape,str(stl),tolerance=0.15,angularTolerance=0.15)
+    cq.exporters.export(shape,str(stl),tolerance=0.04,angularTolerance=0.08)
     cq.exporters.export(shape,str(step))
     mesh=trimesh.load_mesh(stl,process=True)
     if not mesh.is_watertight: raise ValueError(name+' non-watertight')
@@ -24,10 +24,15 @@ jade=[0.16,0.48,0.37,1];gold=[1,0.51,0.12,1];ivory=[0.94,0.89,0.71,1];dark=[0.08
 profile=[(-20,251),(-16,271),(0,282),(36,284),(65,279),(88,266),(98,251),(86,245),(64,247),(45,239),(13,233),(-11,236)]
 for side,y in [('left',46),('right',-44)]:
     shape=cq.Workplane('XZ',origin=(0,y,0)).spline(profile,periodic=True).close().extrude(2)
-    # Fenestration lightens the head and exposes stock shells for access.
-    for x,z,rx,rz in [(-5,252,8,10),(68,263,13,6)]:
-        cut=cq.Workplane('XZ',origin=(x,y+1,z)).ellipse(rx,rz).extrude(4)
-        shape=shape.cut(cut)
+    sign=1 if side=='left' else -1
+    # Inside relief leaves a 1.2 mm face, 3 mm perimeter rib and full-thickness screw lands.
+    pocket=cq.Workplane('XZ',origin=(0,sign*43.9,0)).spline(profile,periodic=True).close().offset2D(-3).extrude(-sign*.9)
+    for x,z in [(29,265),(-6,278),(36,280)]:
+        land=cq.Workplane('XZ',origin=(x,sign*47,z)).circle(5).extrude(sign*5)
+        pocket=pocket.cut(land)
+    shape=shape.cut(pocket)
+    # Continuous cheek face; a clearance hole receives the eye's locating stem.
+    shape=shape.cut(cq.Workplane('XZ',origin=(29,y+1,265)).circle(2.7).extrude(4))
     # M2 clearance; independent cross ties support the cheeks above the stock shell.
     for x,z in [(-6,278),(36,280)]:
         shape=shape.cut(cq.Workplane('XZ',origin=(x,y+1,z)).circle(1.2).extrude(4))
@@ -37,7 +42,11 @@ for side,y in [('left',46),('right',-44)]:
     add('teeth_'+side,cq.Workplane('XZ',origin=(0,48 if side=='left' else -46,0)).polyline(points).close().extrude(2).edges('|Y').fillet(.7),'jaw_soft',ivory)
     sign=1 if side=='left' else -1
     eye=cq.Workplane('XY').sphere(13).translate((29,sign*40,265))
-    eye=eye.intersect(cq.Workplane('XY').box(40,8,40).translate((29,sign*49,265)))
+    eye=eye.intersect(cq.Workplane('XY').box(40,8,40).translate((29,sign*50.3,265)))
+    stem=cq.Workplane('XZ',origin=(29,sign*46.3,265)).circle(2.5).extrude(sign*2)
+    eye=eye.union(stem)
+    pilot=cq.Workplane('XZ',origin=(29,sign*44.3,265)).circle(.8).extrude(-sign*6)
+    eye=eye.cut(pilot)
     add('brow_'+side,eye,'jaw_soft',ivory) # retained part ID; now a convex eye finish carrier
 # Roof bridges are open underneath; end bosses carry cheek screws.
 for index,(x,z) in enumerate([(-6,278),(36,280)]):
@@ -46,6 +55,8 @@ for index,(x,z) in enumerate([(-6,278),(36,280)]):
         boss=cq.Workplane('XY').box(7,6,8).translate((x,y,z+2))
         hole=cq.Workplane('XZ',origin=(x,y+5,z)).circle(1.2).extrude(10)
         bridge=bridge.union(boss).cut(hole)
+    for y in [-18,18]:
+        bridge=bridge.cut(cq.Workplane('XY').box(4,2,6).translate((x,y,z+4)))
     add('head_bridge_'+str(index+1),bridge,'jaw_soft',jade)
 # Three hollow tail segments: shallow sockets can be tuned in a CAD editor.
 anchors=[(-52,0,149,11),(-99,0,153,8),(-142,0,170,5),(-180,0,187,2)]
@@ -63,7 +74,7 @@ add('tail_saddle',saddle,'trunk_base',gold)
 # Little forelimbs are removable static styling; no extra policy outputs.
 for side,sign in [('left',1),('right',-1)]:
     poly=[(4,174),(17,177),(32,163),(40,166),(46,161),(38,154),(29,155),(14,166),(4,165)]
-    arm=cq.Workplane('XZ',origin=(0,39 if sign==1 else -36,0)).polyline(poly).close().extrude(3)
+    arm=cq.Workplane('XZ',origin=(0,39 if sign==1 else -36,0)).polyline(poly).close().extrude(3).edges('|Y').fillet(.7)
     arm=arm.cut(cq.Workplane('XZ',origin=(10,40 if sign==1 else -35,170)).circle(1.2).extrude(5))
     add('forearm_'+side,arm,'trunk_base',jade)
     bracket=cq.Workplane('XY').box(10,10,15).translate((10,sign*31,168))
@@ -95,9 +106,9 @@ for p in parts:
     colors=np.tile((np.array(p['color'])*255).astype(np.uint8),(len(world.vertices),1))
     if p['name'].startswith('brow_'):
         x,y,z=world.vertices.T;sgn=1 if p['name'].endswith('left') else -1
-        pupil=(sgn*y>46)&(((x-31)/8.5)**2+((z-265)/10)**2<1)
+        pupil=(sgn*y>46.3)&(((x-31)/6.4)**2+((z-265)/7.8)**2<1)
         colors[pupil]=[15,32,29,255]
-        glint=pupil&(((x-28)/2.8)**2+((z-269)/3)**2<1)
+        glint=pupil&(((x-29)/2.0)**2+((z-268)/2.3)**2<1)
         colors[glint]=[255,253,239,255]
         # A painted black pupil approximation for the MuJoCo visual renderer.
         # Zero mass/collision; finish does not add a mechanical component.

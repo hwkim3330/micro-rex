@@ -64,7 +64,7 @@
   <worldbody>
     <body name="trunk_base" pos="0 0 0.12" quat="1 0 0 0" childclass="microduck">
       <freejoint name="trunk_base_freejoint" />
-      <inertial pos="-0.025400354521593314 -2.466302755036965e-05 0.0059830663116960114" mass="0.2187705129268621" fullinertia="0.00015736381119903082 0.00025283371372367385 0.00020504232391940845 8.658133946193314e-08 -1.7583730997556723e-06 1.152580609247337e-07" />
+      <inertial pos="-0.025401004806591278 -2.4663335898809683e-05 0.005982587184682039" mass="0.21876778767087815" fullinertia="0.00015735705185150291 0.0002528235191452428 0.0002050324840134972 8.658482707261705e-08 -1.7529868370922143e-06 1.1526065360057376e-07" />
       <geom type="mesh" class="visual" pos="0.006 0.0175 -0.005" quat="1 -0 -0 0" mesh="seeed_bearing__configuration__22x16x4" material="seeed_bearing__configuration__22x16x4_material" />
       <geom type="mesh" class="visual" pos="0.004 -0.0005 -0.0175" quat="0.707107 0 0 0.707107" mesh="right_shell" material="right_shell_material" />
       <geom type="mesh" class="visual" pos="0.0042 0 -0.0175215" quat="0.707107 -0 0 0.707107" mesh="banana_pcb_locker" material="banana_pcb_locker_material" />
@@ -138,7 +138,7 @@
             <geom type="mesh" class="visual" pos="0.018 0 0.0145" quat="0.707107 0 -0.707107 -0" mesh="seeed_bearing__configuration__22x16x4" material="seeed_bearing__configuration__22x16x4_material" />
             <body name="jaw_soft" pos="-0.0179 0 0.0145" quat="0.707107 0 -0.707107 -0">
               <joint axis="0 0 1" name="head_roll" type="hinge" range="-0.43633231299858327 0.4363323129985815" class="chosen_actuator" />
-              <inertial pos="0.008291710731480332 0.0010208031609894761 -0.03077039314772784" mass="0.22199142478446482" fullinertia="0.00040855665483551185 0.00030560488102804914 0.00023402884697818946 2.0305789590989434e-07 -3.921260735516234e-06 4.5712991275368966e-06" />
+              <inertial pos="0.007783851983477973 0.0010503312124358587 -0.031015940102684582" mass="0.215749050227908" fullinertia="0.00039346234616515407 0.00029969881034643854 0.00021906500105933464 8.800333218838641e-08 -2.6552888672053663e-06 4.5156596715837545e-06" />
               <geom type="mesh" class="visual" pos="0.0155 -9.13778e-05 -0.05548" quat="0.5 -0.5 0.5 -0.5" mesh="lens" material="lens_material" />
               <geom type="mesh" class="visual" pos="-0.0045 -9.13778e-05 -0.0178" quat="0.5 0.5 0.5 0.5" mesh="face_part" material="face_part_material" />
               <geom type="mesh" class="visual" pos="0.003 0.0255 -0.018" quat="0.707107 0 -0 -0.707107" mesh="xl330" material="xl330_material" />
@@ -170,12 +170,12 @@
               <geom name="finish_brow_right" type="sphere" pos="0.029385400000000048 -0.05189999999999998 -0.022899999999999983" size=".006" rgba=".04 .08 .07 1" mass="0" contype="0" conaffinity="0" group="2" />
               <geom name="rex_head_bridge_1" type="mesh" mesh="head_bridge_1" class="visual" rgba="0.16 0.48 0.37 1" mass="0" />
               <geom name="rex_head_bridge_2" type="mesh" mesh="head_bridge_2" class="visual" rgba="0.16 0.48 0.37 1" mass="0" />
-              <geom name="rex_collision_jaw_soft_0" type="box" pos="0.02326061362304691 0.04499999999999998 -0.030700627708435034" size="0.026188323974609354 0.0010000000000000009 0.0594929971694946" group="3" contype="1" conaffinity="1" mass="0" rgba="0.8 0.2 0.1 0.2" />
-              <geom name="rex_collision_jaw_soft_1" type="box" pos="0.009012299719238333 0.04699999999999998 -0.07030303993225094" size="0.004373100280761709 0.0010000000000000009 0.016896810531616197" group="3" contype="1" conaffinity="1" mass="0" rgba="0.8 0.2 0.1 0.2" />
-              <geom name="rex_collision_jaw_soft_2" type="box" pos="0.029385400000000048 0.04899150466918943 -0.020899999999999988" size="0.012000000000000004 0.003991504669189454 0.011999999999999997" group="3" contype="1" conaffinity="1" mass="0" rgba="0.8 0.2 0.1 0.2" />
-              <geom name="rex_collision_jaw_soft_3" type="box" pos="0.02326061362304691 -0.04499999999999998 -0.030700627708435034" size="0.026188323974609354 0.0010000000000000009 0.0594929971694946" group="3" contype="1" conaffinity="1" mass="0" rgba="0.8 0.2 0.1 0.2" />
-              <geom name="rex_collision_jaw_soft_4" type="box" pos="0.009012299719238333 -0.04699999999999998 -0.07030303993225094" size="0.004373100280761709 0.0010000000000000009 0.016896810531616197" group="3" contype="1" conaffinity="1" mass="0" rgba="0.8 0.2 0.1 0.2" />
-              <geom name="rex_collision_jaw_soft_5" type="box" pos="0.029385400000000048 -0.04899150466918943 -0.020899999999999988" size="0.012000000000000004 0.003991504669189454 0.011999999999999997" group="3" contype="1" conaffinity="1" mass="0" rgba="0.8 0.2 0.1 0.2" />
+              <geom name="rex_collision_jaw_soft_0" type="box" pos="0.023260247412109403 0.04499999999999998 -0.03069988861083982" size="0.026188964843749985 0.0010000000000000009 0.05949403381347654" group="3" contype="1" conaffinity="1" mass="0" rgba="0.8 0.2 0.1 0.2" />
+              <geom name="rex_collision_jaw_soft_1" type="box" pos="0.009012070837402391 0.04699999999999998 -0.07030309906005856" size="0.004373329162597651 0.0010000000000000009 0.01689685821533202" group="3" contype="1" conaffinity="1" mass="0" rgba="0.8 0.2 0.1 0.2" />
+              <geom name="rex_collision_jaw_soft_2" type="box" pos="0.02938540000000002 0.04864757728576658 -0.0209000009536743" size="0.01137145996093749 0.004347578048706058 0.011369208335876462" group="3" contype="1" conaffinity="1" mass="0" rgba="0.8 0.2 0.1 0.2" />
+              <geom name="rex_collision_jaw_soft_3" type="box" pos="0.023260247412109403 -0.04499999999999998 -0.03069988861083982" size="0.026188964843749985 0.0010000000000000009 0.05949403381347654" group="3" contype="1" conaffinity="1" mass="0" rgba="0.8 0.2 0.1 0.2" />
+              <geom name="rex_collision_jaw_soft_4" type="box" pos="0.009012070837402391 -0.04699999999999998 -0.07030309906005856" size="0.004373329162597651 0.0010000000000000009 0.01689685821533202" group="3" contype="1" conaffinity="1" mass="0" rgba="0.8 0.2 0.1 0.2" />
+              <geom name="rex_collision_jaw_soft_5" type="box" pos="0.02938540000000002 -0.04864757728576658 -0.0209000009536743" size="0.01137145996093749 0.004347578048706058 0.011369208335876462" group="3" contype="1" conaffinity="1" mass="0" rgba="0.8 0.2 0.1 0.2" />
               <geom name="rex_collision_jaw_soft_6" type="box" pos="0.044385400000000054 0.0 0.0141" size="0.0040000000000000036 0.04599999999999998 0.003499999999999998" group="3" contype="1" conaffinity="1" mass="0" rgba="0.8 0.2 0.1 0.2" />
               <geom name="rex_collision_jaw_soft_7" type="box" pos="0.046385400000000056 0.0 -0.027899999999999984" size="0.0040000000000000036 0.04599999999999998 0.0034999999999999996" group="3" contype="1" conaffinity="1" mass="0" rgba="0.8 0.2 0.1 0.2" />
             </body>
@@ -230,13 +230,13 @@
       <geom name="rex_arm_standoff_left" type="mesh" mesh="arm_standoff_left" class="visual" rgba="1 0.51 0.12 1" mass="0" />
       <geom name="rex_forearm_right" type="mesh" mesh="forearm_right" class="visual" rgba="0.16 0.48 0.37 1" mass="0" />
       <geom name="rex_arm_standoff_right" type="mesh" mesh="arm_standoff_right" class="visual" rgba="1 0.51 0.12 1" mass="0" />
-      <geom name="rex_collision_trunk_base_0" type="box" pos="-0.07537280082702637 0.0 0.02950540924072266" size="0.02430559730529785 0.011 0.011465782165527336" group="3" contype="1" conaffinity="1" mass="0" rgba="0.8 0.2 0.1 0.2" />
-      <geom name="rex_collision_trunk_base_1" type="box" pos="-0.11994850921630859 0.0 0.040105064392089856" size="0.023889778137207024 0.008 0.014544746398925779" group="3" contype="1" conaffinity="1" mass="0" rgba="0.8 0.2 0.1 0.2" />
-      <geom name="rex_collision_trunk_base_2" type="box" pos="-0.16038745117187503 0.0 0.05713077545166016" size="0.020429275512695313 0.005 0.01169486236572266" group="3" contype="1" conaffinity="1" mass="0" rgba="0.8 0.2 0.1 0.2" />
+      <geom name="rex_collision_trunk_base_0" type="box" pos="-0.07537280082702637 0.0 0.02950540924072266" size="0.02430559730529785 0.010997825622558594 0.011465782165527336" group="3" contype="1" conaffinity="1" mass="0" rgba="0.8 0.2 0.1 0.2" />
+      <geom name="rex_collision_trunk_base_1" type="box" pos="-0.11994850921630859 0.0 0.040105064392089856" size="0.023889778137207024 0.007998418807983399 0.014544746398925779" group="3" contype="1" conaffinity="1" mass="0" rgba="0.8 0.2 0.1 0.2" />
+      <geom name="rex_collision_trunk_base_2" type="box" pos="-0.16038745117187503 0.0 0.05713077545166016" size="0.020429275512695313 0.004999011516571045 0.01169486236572266" group="3" contype="1" conaffinity="1" mass="0" rgba="0.8 0.2 0.1 0.2" />
       <geom name="rex_collision_trunk_base_3" type="box" pos="-0.0495 0.0 0.024000000000000007" size="0.0015000000000000013 0.017 0.015" group="3" contype="1" conaffinity="1" mass="0" rgba="0.8 0.2 0.1 0.2" />
-      <geom name="rex_collision_trunk_base_4" type="box" pos="0.025 0.037500000000000006 0.0455" size="0.020999999999999998 0.0014999999999999979 0.011499999999999996" group="3" contype="1" conaffinity="1" mass="0" rgba="0.8 0.2 0.1 0.2" />
+      <geom name="rex_collision_trunk_base_4" type="box" pos="0.024811048507690434 0.037500000000000006 0.045481971740722674" size="0.02081104850769043 0.0014999999999999979 0.01145220184326172" group="3" contype="1" conaffinity="1" mass="0" rgba="0.8 0.2 0.1 0.2" />
       <geom name="rex_collision_trunk_base_5" type="box" pos="0.01 0.031000000000000003 0.048000000000000015" size="0.004999999999999999 0.005000000000000001 0.007500000000000007" group="3" contype="1" conaffinity="1" mass="0" rgba="0.8 0.2 0.1 0.2" />
-      <geom name="rex_collision_trunk_base_6" type="box" pos="0.025 -0.037500000000000006 0.0455" size="0.020999999999999998 0.0014999999999999979 0.011499999999999996" group="3" contype="1" conaffinity="1" mass="0" rgba="0.8 0.2 0.1 0.2" />
+      <geom name="rex_collision_trunk_base_6" type="box" pos="0.024811048507690434 -0.037500000000000006 0.045481971740722674" size="0.02081104850769043 0.0014999999999999979 0.01145220184326172" group="3" contype="1" conaffinity="1" mass="0" rgba="0.8 0.2 0.1 0.2" />
       <geom name="rex_collision_trunk_base_7" type="box" pos="0.01 -0.031000000000000003 0.048000000000000015" size="0.004999999999999999 0.005000000000000001 0.007500000000000007" group="3" contype="1" conaffinity="1" mass="0" rgba="0.8 0.2 0.1 0.2" />
     </body>
   </worldbody>

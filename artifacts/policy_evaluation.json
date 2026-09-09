@@ -28,7 +28,9 @@
         "final_yaw_deg": -0.29,
         "first_fall_s": null,
         "upright_entire_trial": true,
-        "finite": true
+        "finite": true,
+        "policy": "alpha_walking",
+        "head_pitch_command_rad": 0
       },
       {
         "seed": 1,
@@ -49,7 +51,9 @@
         "final_yaw_deg": -0.22,
         "first_fall_s": null,
         "upright_entire_trial": true,
-        "finite": true
+        "finite": true,
+        "policy": "alpha_walking",
+        "head_pitch_command_rad": 0
       },
       {
         "seed": 2,
@@ -70,7 +74,9 @@
         "final_yaw_deg": -0.26,
         "first_fall_s": null,
         "upright_entire_trial": true,
-        "finite": true
+        "finite": true,
+        "policy": "alpha_walking",
+        "head_pitch_command_rad": 0
       },
       {
         "seed": 0,
@@ -91,7 +97,9 @@
         "final_yaw_deg": -0.24,
         "first_fall_s": null,
         "upright_entire_trial": true,
-        "finite": true
+        "finite": true,
+        "policy": "alpha_walking",
+        "head_pitch_command_rad": 0
       },
       {
         "seed": 1,
@@ -112,7 +120,9 @@
         "final_yaw_deg": -0.33,
         "first_fall_s": null,
         "upright_entire_trial": true,
-        "finite": true
+        "finite": true,
+        "policy": "alpha_walking",
+        "head_pitch_command_rad": 0
       },
       {
         "seed": 2,
@@ -133,7 +143,9 @@
         "final_yaw_deg": -0.32,
         "first_fall_s": null,
         "upright_entire_trial": true,
-        "finite": true
+        "finite": true,
+        "policy": "alpha_walking",
+        "head_pitch_command_rad": 0
       },
       {
         "seed": 0,
@@ -154,7 +166,9 @@
         "final_yaw_deg": -31.47,
         "first_fall_s": null,
         "upright_entire_trial": true,
-        "finite": true
+        "finite": true,
+        "policy": "alpha_walking",
+        "head_pitch_command_rad": 0
       },
       {
         "seed": 1,
@@ -175,7 +189,9 @@
         "final_yaw_deg": -22.18,
         "first_fall_s": null,
         "upright_entire_trial": true,
-        "finite": true
+        "finite": true,
+        "policy": "alpha_walking",
+        "head_pitch_command_rad": 0
       },
       {
         "seed": 2,
@@ -196,7 +212,9 @@
         "final_yaw_deg": -21.42,
         "first_fall_s": null,
         "upright_entire_trial": true,
-        "finite": true
+        "finite": true,
+        "policy": "alpha_walking",
+        "head_pitch_command_rad": 0
       },
       {
         "seed": 0,
@@ -217,7 +235,9 @@
         "final_yaw_deg": 3.24,
         "first_fall_s": null,
         "upright_entire_trial": true,
-        "finite": true
+        "finite": true,
+        "policy": "alpha_walking",
+        "head_pitch_command_rad": 0
       },
       {
         "seed": 1,
@@ -238,7 +258,9 @@
         "final_yaw_deg": 3.21,
         "first_fall_s": null,
         "upright_entire_trial": true,
-        "finite": true
+        "finite": true,
+        "policy": "alpha_walking",
+        "head_pitch_command_rad": 0
       },
       {
         "seed": 2,
@@ -259,7 +281,9 @@
         "final_yaw_deg": 3.06,
         "first_fall_s": null,
         "upright_entire_trial": true,
-        "finite": true
+        "finite": true,
+        "policy": "alpha_walking",
+        "head_pitch_command_rad": 0
       }
     ],
     "micro_rex": [
@@ -271,18 +295,20 @@
           0.0
         ],
         "duration_s": 10,
-        "mass_kg": 0.7900151177113268,
-        "max_tilt_deg": 0.87,
+        "mass_kg": 0.7837700178987861,
+        "max_tilt_deg": 0.85,
         "min_trunk_height_m": 0.1147,
         "final_xy_m": [
           0.0021,
           0.0001
         ],
         "mean_world_vx_m_s": 0.0002,
-        "final_yaw_deg": -0.34,
+        "final_yaw_deg": -0.31,
         "first_fall_s": null,
         "upright_entire_trial": true,
-        "finite": true
+        "finite": true,
+        "policy": "alpha_walking",
+        "head_pitch_command_rad": 0
       },
       {
         "seed": 1,
@@ -292,18 +318,20 @@
           0.0
         ],
         "duration_s": 10,
-        "mass_kg": 0.7900151177113268,
-        "max_tilt_deg": 0.8,
+        "mass_kg": 0.7837700178987861,
+        "max_tilt_deg": 0.83,
         "min_trunk_height_m": 0.1147,
         "final_xy_m": [
           0.002,
-          0.0002
+          0.0003
         ],
         "mean_world_vx_m_s": 0.0002,
-        "final_yaw_deg": -0.25,
+        "final_yaw_deg": -0.23,
         "first_fall_s": null,
         "upright_entire_trial": true,
-        "finite": true
+        "finite": true,
+        "policy": "alpha_walking",
+        "head_pitch_command_rad": 0
       },
       {
         "seed": 2,
@@ -313,18 +341,20 @@
           0.0
         ],
         "duration_s": 10,
-        "mass_kg": 0.7900151177113268,
-        "max_tilt_deg": 0.89,
+        "mass_kg": 0.7837700178987861,
+        "max_tilt_deg": 0.81,
         "min_trunk_height_m": 0.1149,
         "final_xy_m": [
           0.0019,
           0.0003
         ],
         "mean_world_vx_m_s": 0.0002,
-        "final_yaw_deg": -0.34,
+        "final_yaw_deg": -0.27,
         "first_fall_s": null,
         "upright_entire_trial": true,
-        "finite": true
+        "finite": true,
+        "policy": "alpha_walking",
+        "head_pitch_command_rad": 0
       },
       {
         "seed": 0,
@@ -334,18 +364,20 @@
           0.0
         ],
         "duration_s": 10,
-        "mass_kg": 0.7900151177113268,
-        "max_tilt_deg": 0.85,
+        "mass_kg": 0.7837700178987861,
+        "max_tilt_deg": 0.82,
         "min_trunk_height_m": 0.1145,
         "final_xy_m": [
-          0.006,
-          0.0027
+          0.0061,
+          0.0023
         ],
         "mean_world_vx_m_s": 0.0006,
-        "final_yaw_deg": -0.26,
+        "final_yaw_deg": -0.29,
         "first_fall_s": null,
         "upright_entire_trial": true,
-        "finite": true
+        "finite": true,
+        "policy": "alpha_walking",
+        "head_pitch_command_rad": 0
       },
       {
         "seed": 1,
@@ -355,39 +387,43 @@
           0.0
         ],
         "duration_s": 10,
-        "mass_kg": 0.7900151177113268,
-        "max_tilt_deg": 0.88,
+        "mass_kg": 0.7837700178987861,
+        "max_tilt_deg": 0.85,
         "min_trunk_height_m": 0.1145,
         "final_xy_m": [
+          0.006,
+          0.0023
+        ],
+        "mean_world_vx_m_s": 0.0006,
+        "final_yaw_deg": -0.38,
+        "first_fall_s": null,
+        "upright_entire_trial": true,
+        "finite": true,
+        "policy": "alpha_walking",
+        "head_pitch_command_rad": 0
+      },
+      {
+        "seed": 2,
+        "velocity_command": [
+          0.1,
+          0.0,
+          0.0
+        ],
+        "duration_s": 10,
+        "mass_kg": 0.7837700178987861,
+        "max_tilt_deg": 0.87,
+        "min_trunk_height_m": 0.1146,
+        "final_xy_m": [
           0.0059,
-          0.0027
+          0.0024
         ],
         "mean_world_vx_m_s": 0.0006,
         "final_yaw_deg": -0.35,
         "first_fall_s": null,
         "upright_entire_trial": true,
-        "finite": true
-      },
-      {
-        "seed": 2,
-        "velocity_command": [
-          0.1,
-          0.0,
-          0.0
-        ],
-        "duration_s": 10,
-        "mass_kg": 0.7900151177113268,
-        "max_tilt_deg": 0.89,
-        "min_trunk_height_m": 0.1146,
-        "final_xy_m": [
-          0.0059,
-          0.0027
-        ],
-        "mean_world_vx_m_s": 0.0006,
-        "final_yaw_deg": -0.47,
-        "first_fall_s": null,
-        "upright_entire_trial": true,
-        "finite": true
+        "finite": true,
+        "policy": "alpha_walking",
+        "head_pitch_command_rad": 0
       },
       {
         "seed": 0,
@@ -397,39 +433,43 @@
           0.0
         ],
         "duration_s": 10,
-        "mass_kg": 0.7900151177113268,
-        "max_tilt_deg": 4.29,
+        "mass_kg": 0.7837700178987861,
+        "max_tilt_deg": 4.03,
+        "min_trunk_height_m": 0.1125,
+        "final_xy_m": [
+          1.0642,
+          -0.2165
+        ],
+        "mean_world_vx_m_s": 0.1064,
+        "final_yaw_deg": -27.71,
+        "first_fall_s": null,
+        "upright_entire_trial": true,
+        "finite": true,
+        "policy": "alpha_walking",
+        "head_pitch_command_rad": 0
+      },
+      {
+        "seed": 1,
+        "velocity_command": [
+          0.3,
+          0.0,
+          0.0
+        ],
+        "duration_s": 10,
+        "mass_kg": 0.7837700178987861,
+        "max_tilt_deg": 4.19,
         "min_trunk_height_m": 0.1124,
         "final_xy_m": [
-          1.0174,
-          -0.3251
-        ],
-        "mean_world_vx_m_s": 0.1017,
-        "final_yaw_deg": -31.96,
-        "first_fall_s": null,
-        "upright_entire_trial": true,
-        "finite": true
-      },
-      {
-        "seed": 1,
-        "velocity_command": [
-          0.3,
-          0.0,
-          0.0
-        ],
-        "duration_s": 10,
-        "mass_kg": 0.7900151177113268,
-        "max_tilt_deg": 4.31,
-        "min_trunk_height_m": 0.1125,
-        "final_xy_m": [
-          1.0092,
-          -0.3487
+          1.009,
+          -0.3399
         ],
         "mean_world_vx_m_s": 0.1009,
-        "final_yaw_deg": -34.07,
+        "final_yaw_deg": -34.26,
         "first_fall_s": null,
         "upright_entire_trial": true,
-        "finite": true
+        "finite": true,
+        "policy": "alpha_walking",
+        "head_pitch_command_rad": 0
       },
       {
         "seed": 2,
@@ -439,18 +479,20 @@
           0.0
         ],
         "duration_s": 10,
-        "mass_kg": 0.7900151177113268,
-        "max_tilt_deg": 4.24,
+        "mass_kg": 0.7837700178987861,
+        "max_tilt_deg": 3.7,
         "min_trunk_height_m": 0.1125,
         "final_xy_m": [
-          1.0596,
-          -0.2371
+          1.0547,
+          -0.2022
         ],
-        "mean_world_vx_m_s": 0.106,
-        "final_yaw_deg": -30.76,
+        "mean_world_vx_m_s": 0.1055,
+        "final_yaw_deg": -23.09,
         "first_fall_s": null,
         "upright_entire_trial": true,
-        "finite": true
+        "finite": true,
+        "policy": "alpha_walking",
+        "head_pitch_command_rad": 0
       },
       {
         "seed": 0,
@@ -460,18 +502,20 @@
           0.3
         ],
         "duration_s": 10,
-        "mass_kg": 0.7900151177113268,
-        "max_tilt_deg": 0.76,
+        "mass_kg": 0.7837700178987861,
+        "max_tilt_deg": 0.71,
         "min_trunk_height_m": 0.1145,
         "final_xy_m": [
-          0.0051,
-          0.0029
+          0.005,
+          0.0031
         ],
         "mean_world_vx_m_s": 0.0005,
-        "final_yaw_deg": 3.52,
+        "final_yaw_deg": 3.48,
         "first_fall_s": null,
         "upright_entire_trial": true,
-        "finite": true
+        "finite": true,
+        "policy": "alpha_walking",
+        "head_pitch_command_rad": 0
       },
       {
         "seed": 1,
@@ -481,18 +525,20 @@
           0.3
         ],
         "duration_s": 10,
-        "mass_kg": 0.7900151177113268,
-        "max_tilt_deg": 0.82,
+        "mass_kg": 0.7837700178987861,
+        "max_tilt_deg": 0.79,
         "min_trunk_height_m": 0.1146,
         "final_xy_m": [
-          0.0047,
+          0.0049,
           0.0034
         ],
         "mean_world_vx_m_s": 0.0005,
-        "final_yaw_deg": 3.64,
+        "final_yaw_deg": 3.47,
         "first_fall_s": null,
         "upright_entire_trial": true,
-        "finite": true
+        "finite": true,
+        "policy": "alpha_walking",
+        "head_pitch_command_rad": 0
       },
       {
         "seed": 2,
@@ -502,18 +548,20 @@
           0.3
         ],
         "duration_s": 10,
-        "mass_kg": 0.7900151177113268,
-        "max_tilt_deg": 0.86,
+        "mass_kg": 0.7837700178987861,
+        "max_tilt_deg": 0.83,
         "min_trunk_height_m": 0.1147,
         "final_xy_m": [
-          0.0048,
-          0.0034
+          0.0046,
+          0.0033
         ],
         "mean_world_vx_m_s": 0.0005,
         "final_yaw_deg": 3.38,
         "first_fall_s": null,
         "upright_entire_trial": true,
-        "finite": true
+        "finite": true,
+        "policy": "alpha_walking",
+        "head_pitch_command_rad": 0
       }
     ]
   },
@@ -526,6 +574,151 @@
   ],
   "model_sha256": {
     "vendor/microduck/robot_walk.xml": "80fc4424ed71e430ec4919110dfdb5c714dc1c4e1138e1832a16865cf31eb8c8",
-    "models/micro_rex.xml": "b1cfccabd849bbbdc536d1d43b76185e649e702b1b5b3a827511d22ac5ec733a"
+    "models/micro_rex.xml": "c120445bf2fc2899eeb3bab8ad095b0a8b117154e7941b591cc2be78ec90cfcc"
+  },
+  "standing_weight_sha256": "1569268713e40deea795dd2922dba50d3621e15a872855408b6b1b125b1c094b",
+  "standing_head_command_trials": {
+    "microduck": [
+      {
+        "seed": 0,
+        "velocity_command": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration_s": 10,
+        "mass_kg": 0.7372431799999999,
+        "max_tilt_deg": 1.62,
+        "min_trunk_height_m": 0.1146,
+        "final_xy_m": [
+          0.0024,
+          -0.0
+        ],
+        "mean_world_vx_m_s": 0.0002,
+        "final_yaw_deg": 1.89,
+        "first_fall_s": null,
+        "upright_entire_trial": true,
+        "finite": true,
+        "policy": "alpha_stand",
+        "head_pitch_command_rad": -0.25
+      },
+      {
+        "seed": 0,
+        "velocity_command": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration_s": 10,
+        "mass_kg": 0.7372431799999999,
+        "max_tilt_deg": 1.68,
+        "min_trunk_height_m": 0.1145,
+        "final_xy_m": [
+          0.0028,
+          -0.0001
+        ],
+        "mean_world_vx_m_s": 0.0003,
+        "final_yaw_deg": 1.82,
+        "first_fall_s": null,
+        "upright_entire_trial": true,
+        "finite": true,
+        "policy": "alpha_stand",
+        "head_pitch_command_rad": 0.0
+      },
+      {
+        "seed": 0,
+        "velocity_command": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration_s": 10,
+        "mass_kg": 0.7372431799999999,
+        "max_tilt_deg": 1.6,
+        "min_trunk_height_m": 0.1145,
+        "final_xy_m": [
+          0.0025,
+          -0.0001
+        ],
+        "mean_world_vx_m_s": 0.0003,
+        "final_yaw_deg": 1.7,
+        "first_fall_s": null,
+        "upright_entire_trial": true,
+        "finite": true,
+        "policy": "alpha_stand",
+        "head_pitch_command_rad": 0.25
+      }
+    ],
+    "micro_rex": [
+      {
+        "seed": 0,
+        "velocity_command": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration_s": 10,
+        "mass_kg": 0.7837700178987861,
+        "max_tilt_deg": 1.52,
+        "min_trunk_height_m": 0.1146,
+        "final_xy_m": [
+          0.0024,
+          -0.0
+        ],
+        "mean_world_vx_m_s": 0.0002,
+        "final_yaw_deg": 1.85,
+        "first_fall_s": null,
+        "upright_entire_trial": true,
+        "finite": true,
+        "policy": "alpha_stand",
+        "head_pitch_command_rad": -0.25
+      },
+      {
+        "seed": 0,
+        "velocity_command": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration_s": 10,
+        "mass_kg": 0.7837700178987861,
+        "max_tilt_deg": 1.57,
+        "min_trunk_height_m": 0.1145,
+        "final_xy_m": [
+          0.0028,
+          -0.0001
+        ],
+        "mean_world_vx_m_s": 0.0003,
+        "final_yaw_deg": 1.93,
+        "first_fall_s": null,
+        "upright_entire_trial": true,
+        "finite": true,
+        "policy": "alpha_stand",
+        "head_pitch_command_rad": 0.0
+      },
+      {
+        "seed": 0,
+        "velocity_command": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "duration_s": 10,
+        "mass_kg": 0.7837700178987861,
+        "max_tilt_deg": 1.57,
+        "min_trunk_height_m": 0.1144,
+        "final_xy_m": [
+          0.0023,
+          -0.0001
+        ],
+        "mean_world_vx_m_s": 0.0002,
+        "final_yaw_deg": 1.8,
+        "first_fall_s": null,
+        "upright_entire_trial": true,
+        "finite": true,
+        "policy": "alpha_stand",
+        "head_pitch_command_rad": 0.25
+      }
+    ]
   }
 }

@@ -1,17 +1,20 @@
 part,qty,material_estimate,mass_g,STL,STEP
-skull_cheek_left,1,"PLA estimate, density 1.24 g/cm3",10.07,models/parts/skull_cheek_left.stl,models/step/skull_cheek_left.step
+skull_cheek_left,1,"PLA estimate, density 1.24 g/cm3",7.688,models/parts/skull_cheek_left.stl,models/step/skull_cheek_left.step
 teeth_left,1,"PLA estimate, density 1.24 g/cm3",0.44,models/parts/teeth_left.stl,models/step/teeth_left.step
-brow_left,1,"PLA estimate, density 1.24 g/cm3",2.576,models/parts/brow_left.stl,models/step/brow_left.step
-skull_cheek_right,1,"PLA estimate, density 1.24 g/cm3",10.07,models/parts/skull_cheek_right.stl,models/step/skull_cheek_right.step
+brow_left,1,"PLA estimate, density 1.24 g/cm3",1.917,models/parts/brow_left.stl,models/step/brow_left.step
+skull_cheek_right,1,"PLA estimate, density 1.24 g/cm3",7.688,models/parts/skull_cheek_right.stl,models/step/skull_cheek_right.step
 teeth_right,1,"PLA estimate, density 1.24 g/cm3",0.44,models/parts/teeth_right.stl,models/step/teeth_right.step
-brow_right,1,"PLA estimate, density 1.24 g/cm3",2.576,models/parts/brow_right.stl,models/step/brow_right.step
-head_bridge_1,1,"PLA estimate, density 1.24 g/cm3",3.527,models/parts/head_bridge_1.stl,models/step/head_bridge_1.step
-head_bridge_2,1,"PLA estimate, density 1.24 g/cm3",3.527,models/parts/head_bridge_2.stl,models/step/head_bridge_2.step
+brow_right,1,"PLA estimate, density 1.24 g/cm3",1.917,models/parts/brow_right.stl,models/step/brow_right.step
+head_bridge_1,1,"PLA estimate, density 1.24 g/cm3",3.447,models/parts/head_bridge_1.stl,models/step/head_bridge_1.step
+head_bridge_2,1,"PLA estimate, density 1.24 g/cm3",3.447,models/parts/head_bridge_2.stl,models/step/head_bridge_2.step
 tail_segment_1,1,"PLA estimate, density 1.24 g/cm3",5.107,models/parts/tail_segment_1.stl,models/step/tail_segment_1.step
 tail_segment_2,1,"PLA estimate, density 1.24 g/cm3",3.28,models/parts/tail_segment_2.stl,models/step/tail_segment_2.step
 tail_segment_3,1,"PLA estimate, density 1.24 g/cm3",1.376,models/parts/tail_segment_3.stl,models/step/tail_segment_3.step
 tail_saddle,1,"PLA estimate, density 1.24 g/cm3",3.415,models/parts/tail_saddle.stl,models/step/tail_saddle.step
-forearm_left,1,"PLA estimate, density 1.24 g/cm3",1.529,models/parts/forearm_left.stl,models/step/forearm_left.step
+forearm_left,1,"PLA estimate, density 1.24 g/cm3",1.527,models/parts/forearm_left.stl,models/step/forearm_left.step
 arm_standoff_left,1,"PLA estimate, density 1.24 g/cm3",1.655,models/parts/arm_standoff_left.stl,models/step/arm_standoff_left.step
-forearm_right,1,"PLA estimate, density 1.24 g/cm3",1.529,models/parts/forearm_right.stl,models/step/forearm_right.step
+forearm_right,1,"PLA estimate, density 1.24 g/cm3",1.527,models/parts/forearm_right.stl,models/step/forearm_right.step
 arm_standoff_right,1,"PLA estimate, density 1.24 g/cm3",1.655,models/parts/arm_standoff_right.stl,models/step/arm_standoff_right.step
+eye_retention_screw,2,Candidate M2 x 6 plastic thread-forming; supplier/torque pending,,,
+eye_retention_washer,2,Candidate OD8 ID2.2 thickness0.5 mm; physical fit pending,,,
+head_retention_strap,2,Candidate for 4 x 2 mm slots; routing/strength pending,,,

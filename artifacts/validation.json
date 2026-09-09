@@ -1,5 +1,5 @@
 {
-  "checks_passed": 60,
+  "checks_passed": 66,
   "checks": [
     "Same configuration, velocity and control dimensions",
     "Preserved names and order: mjOBJ_JOINT",
@@ -60,7 +60,13 @@
     "Policy replay dimensions microduck",
     "Policy replay finite microduck",
     "Policy replay dimensions micro_rex",
-    "Policy replay finite micro_rex"
+    "Policy replay finite micro_rex",
+    "Current retention_check.json models/step/skull_cheek_left.step",
+    "Current retention_check.json models/step/brow_left.step",
+    "Current retention_check.json models/step/skull_cheek_right.step",
+    "Current retention_check.json models/step/brow_right.step",
+    "Current balance_study.json vendor/microduck/robot_walk.xml",
+    "Current balance_study.json models/micro_rex.xml"
   ],
   "nq": 21,
   "nv": 20,
@@ -78,18 +84,18 @@
       "upright_3s": false
     },
     "micro_rex": {
-      "mass_kg": 0.7900151177113268,
+      "mass_kg": 0.7837700178987861,
       "reference_com_m": [
-        0.0015205698901630401,
-        -1.2720471323688876e-05,
-        0.15149519605894515
+        0.0012905994205603952,
+        -1.282385302960691e-05,
+        0.1506193394832888
       ],
-      "hold_3s_trunk_z_m": 0.043723286341349275,
-      "hold_3s_tilt_deg": 80.37048685432136,
+      "hold_3s_trunk_z_m": 0.04351481868759607,
+      "hold_3s_tilt_deg": 80.43020569908305,
       "upright_3s": false
     }
   },
-  "added_mass_g": 52.771937711326935,
+  "added_mass_g": 46.5268378987862,
   "hardware_fit": "UNVERIFIED",
   "policy_performance": "Scoped ONNX/BAM simulation results in policy_evaluation.json; command tracking and hardware compatibility are not established",
   "manufacturing": "Prototype CAD; physical fit, tolerances and fasteners require validation",

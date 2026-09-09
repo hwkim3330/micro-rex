@@ -1,0 +1,53 @@
+{
+  "revision": "C",
+  "scope": "Nominal static STEP intersections for eye and candidate washer only",
+  "checks": [
+    {
+      "side": "left",
+      "pair": "eye_to_cheek",
+      "overlap_mm3": 0
+    },
+    {
+      "side": "left",
+      "pair": "washer_to_eye",
+      "overlap_mm3": 0
+    },
+    {
+      "side": "left",
+      "pair": "washer_to_cheek",
+      "overlap_mm3": 0
+    },
+    {
+      "side": "right",
+      "pair": "eye_to_cheek",
+      "overlap_mm3": 0
+    },
+    {
+      "side": "right",
+      "pair": "washer_to_eye",
+      "overlap_mm3": 0
+    },
+    {
+      "side": "right",
+      "pair": "washer_to_cheek",
+      "overlap_mm3": 0
+    }
+  ],
+  "step_sha256": {
+    "models/step/skull_cheek_left.step": "6f8ba792eaaa1fd1c7d5a2d7fb187985d38adcb0d841cb85424f6e14209cba83",
+    "models/step/brow_left.step": "9409d0dcd4a320b502d4144f22ff18cec2fc2a689b29b34ec2938f2a1c2f5605",
+    "models/step/skull_cheek_right.step": "9c1639209b75c718a14424490450752d82548ccbc415673f0aea7435d3e1a1a8",
+    "models/step/brow_right.step": "f7ec16d12af6e586029412956797efabaa4bb144828054029557daefa9d5bc99"
+  },
+  "candidate_screw": "M2 x 6 plastic thread-forming, supplier not selected",
+  "pilot_diameter_mm": 1.6,
+  "pilot_depth_mm": 6,
+  "estimated_thread_engagement_mm": 5.2,
+  "estimated_tip_clearance_mm": 0.8,
+  "stem_radial_clearance_mm": 0.2,
+  "washer_bearing_area_mm2": 27.36,
+  "physical_pull_test_passed": false,
+  "physical_torque_test_passed": false,
+  "head_strap_routing_verified": false,
+  "production_release": false
+}

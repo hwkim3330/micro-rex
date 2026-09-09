@@ -1,16 +1,20 @@
+[![Micro Rex — 실제 CAD로 렌더링한 두 발 공룡](artifacts/readme_hero.png)](https://hwkim3330.github.io/micro-rex/web/)
+
 # MICRO REX
 
-**Microduck의 제어 구조를 유지하는 티렉스형 로봇 외장 설계 프로젝트.**
-
-![Micro Rex CAD rendering](artifacts/micro_rex_hero.png)
+큰 눈, 작은 앞발, 긴 꼬리. **Microduck의 14개 관절과 공식 보행 가중치를 유지하는 작은 티렉스**를 만듭니다. 이미지는 아래에서 내려받는 실제 모델입니다.
 
 [3D 모델 돌려보기](https://hwkim3330.github.io/micro-rex/) · [도면 PDF](drawings/Micro_Rex_Drawings.pdf) · [STEP 조립 파일](models/micro_rex_retrofit.step) · [GLB 전체 모델](models/micro_rex.glb) · [출력 STL](models/print/) · [검증 보고서](artifacts/validation.json)
 
-현재 모델은 **Rev B 호환 외장 프로토타입**입니다. 공식 가중치로 원본과 외장 모델의 CPU 시뮬레이션을 비교했습니다. 실물 장착·보행, 강도 및 제조 공차는 검증되지 않았습니다. [가중치·평가 방법과 한계](docs/POLICY_COMPATIBILITY.md)를 확인하세요.
+현재 모델은 **Rev C 호환 외장 프로토타입**입니다. 눈의 뒤쪽 나사 고정, 머리 스트랩 슬롯, 안쪽 경량 포켓과 가장자리 보강부를 추가했습니다. 공식 가중치의 시뮬레이션, 무게중심 및 눈 고정부의 디지털 검사를 제공합니다. 실물 강도와 보행 시험은 아직 남아 있습니다.
+
+먼저 **같은 관절의 Micro Rex**를 검증하고, 그다음 **저가형 Nano Rex**를 개발합니다. 네발형은 공개 모델에서 내렸습니다. [제품 순서와 완료 기준](docs/PRODUCT_SEQUENCE.md)
+
+[가중치 시험](docs/POLICY_COMPATIBILITY.md) · [무게중심](artifacts/balance_study.json) · [눈 고정부](artifacts/retention_check.json)
 
 ## 무엇을 만들었나
 
-- 카메라 앞을 개방한 두개골 외장, 별도 이빨·눈썹, 위쪽 조립 브리지.
+- 카메라 앞을 개방한 둥근 볼판, 뒤쪽에서 나사로 고정하는 큰 눈, 위쪽 스트랩 브리지.
 - 작은 앞발과 장착 브래킷, 속이 빈 분할 꼬리와 스트랩 장착판.
 - 수정 가능한 CadQuery 원본, 개별 STEP/STL, 16개 부품의 출력 방향 정리본.
 - 전체 로봇 GLB, 외장 STEP 조립 파일, MuJoCo 모델 및 지면이 포함된 장면.
@@ -28,14 +32,21 @@
 | 액추에이터 연결·제어 범위·힘 제한 | 원본과 배열 비교 통과 |
 | 센서 종류·차원·연결 ID | 원본과 배열 비교 통과 |
 | 원본 모델 질량 | 737.24 g |
-| Micro Rex 모델 질량 | 790.02 g |
-| 예상 외장 추가 질량 | 52.77 g, PLA 실체적 환산 |
+| Micro Rex 모델 질량 | 783.77 g, 추가 체결구 실측 전 |
+| 예상 외장 추가 질량 | 46.53 g, PLA 실체적 환산 |
 | 새 출력 STL | 16개, 폐곡면 및 양의 체적 검사 통과 |
 | 단순 PD 자세 유지 | **원본과 Micro Rex 모두 3초 직립 실패**; 정책 평가가 아님 |
 | 공식 ONNX + BAM 평지 시험 | 원본 12회 + 외장 12회, 각 10초 넘어짐 기준 미도달; 속도·방향 추종 부족 |
+| 공식 서기 가중치 + 머리 명령 | 원본 3회 + 외장 3회, 각 10초 넘어짐 기준 미도달 |
+| 같은 HOME 자세의 무게중심 변화 | 뒤로 0.96 mm / 위로 4.58 mm; 두 발 접지 가정의 정적 계산 |
+| 눈·와셔 체결 공간 | 6개 STEP 조합 겹침 없음; 인발·토크 실물 시험 전 |
 | 실물 조립 / sim-to-real | **미검증** |
 
 원본 로봇의 입 모터는 14차원 보행 정책과 별도입니다. 이 패키지는 입 모터 제어를 추가하거나 15차원 정책으로 바꾸지 않습니다. 꼬리·앞발은 정적 외장입니다. 추가 질량과 관성은 모델에 반영했으며, 기존 보행 정책을 그대로 쓰면 동일 성능이 나온다고 보장하지 않습니다.
+
+![원본과 Micro Rex의 정적 무게중심 투영 비교](artifacts/balance_study.png)
+
+목·머리 각도를 바꾼 일곱 자세에서 가정한 두 발 지지영역까지 최소 여유는 7.46 mm입니다. 실제 접촉력이나 보행 중 안정성을 증명하는 값은 아닙니다. 머리 5g·몸통 5g의 미실측 체결구 예산도 별도 민감도 계산에 기록했습니다.
 
 ## 원본 자료도 함께 받기
 
@@ -59,10 +70,14 @@ pip install -r requirements.txt
 python cad/build.py
 python tools/print_parts.py
 python tools/tail_continuous.py
+python tools/retention_check.py
+python tools/balance_study.py
 python tools/validate.py
 MUJOCO_GL=egl python tools/render.py  # EGL 환경 필요; 정적 렌더는 이미 포함
 python tools/drawings.py
 ```
+
+기구를 변경한 뒤에는 [정책 평가](docs/POLICY_COMPATIBILITY.md)를 다시 실행해야 기존 평가 기록의 모델 SHA가 맞습니다. README 대표 이미지는 `node tools/readme-portrait.mjs`로 현재 GLB와 기록 자세에서 다시 생성합니다.
 
 `models/parts/`는 조립 기준 좌표, `models/print/`는 중심 정렬 및 출력면을 맞춘 파일입니다. 원본 로봇의 STL은 `vendor/microduck/assets/`에 있습니다. 전체 조립 STEP은 **새 외장**만 정확한 CAD 솔리드로 담고, 원본 전체 로봇 형상은 GLB와 upstream STL/MJCF로 제공합니다.
 
