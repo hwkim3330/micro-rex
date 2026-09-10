@@ -11,7 +11,7 @@ const browser=await puppeteer.launch({executablePath:process.env.CHROME_PATH||'/
 try{
  const page=await browser.newPage();await page.setViewport({width:1200,height:800,deviceScaleFactor:1.5});
  await page.goto(`http://127.0.0.1:${server.address().port}/web/`);await page.waitForFunction(()=>window.microRexLoaded===true);
- const record=JSON.parse(await readFile(path.join(root,'artifacts/policy_replay_micro_rex.json'),'utf8'));
+ const record=JSON.parse(await readFile(path.join(root,'artifacts/policy_replay_microduck.json'),'utf8'));
  await page.evaluate(async record=>{
   const THREE=await import('/web/vendor/three/build/three.module.js');
   const api=window.microRex,view=document.querySelector('#view');
@@ -19,10 +19,10 @@ try{
   const style=document.createElement('style');style.textContent='#view{position:absolute;left:350px;top:0;width:850px!important;height:800px!important;min-height:0!important;background:transparent;border:0} #view>*:not(canvas){display:none} canvas{outline:none}';document.head.append(style);
   document.body.append(view);
   const copy=document.createElement('div');copy.style.cssText='position:absolute;left:64px;top:82px;width:330px;z-index:2;pointer-events:none';
-  copy.innerHTML='<p style="letter-spacing:4px;font-size:13px;color:#b66b29">MEET YOUR LITTLE DINOSAUR</p><h1 style="font-size:86px;line-height:.95;letter-spacing:-6px;margin:32px 0;color:#163f32">MICRO<br><span style="color:#e79a48">REX.</span></h1><p style="font-size:27px;line-height:1.6;margin:26px 0">같은 관절.<br>작은 공룡.</p><p style="font-size:13px;letter-spacing:1px;line-height:2.1">14 MICRODUCK JOINTS<br>UNCHANGED WALKING WEIGHTS</p>';
+  copy.innerHTML='<p style="letter-spacing:4px;font-size:13px;color:#b66b29">BACK TO THE ORIGINAL</p><h1 style="font-size:68px;line-height:.95;letter-spacing:-6px;margin:32px 0;color:#163f32">MICRO<br><span style="color:#e79a48">DUCK.</span></h1><p style="font-size:27px;line-height:1.6;margin:26px 0">원본 외형.<br>원본 관절.</p><p style="font-size:13px;letter-spacing:1px;line-height:2.1">14 MICRODUCK JOINTS<br>UNCHANGED WALKING WEIGHTS</p>';
   document.body.append(copy);
   copy.querySelectorAll('p').forEach(p=>p.style.color='#527066');
-  const footer=document.createElement('div');footer.style.cssText='position:absolute;left:64px;right:50px;bottom:33px;font-size:12px;letter-spacing:1px;display:flex;justify-content:space-between;color:#527066';footer.innerHTML='<span>ACTUAL CAD MODEL / REV C</span><span>SIMULATION TESTED · PHYSICAL BUILD PENDING</span>';document.body.append(footer);
+  const footer=document.createElement('div');footer.style.cssText='position:absolute;left:64px;right:50px;bottom:33px;font-size:12px;letter-spacing:1px;display:flex;justify-content:space-between;color:#527066';footer.innerHTML='<span>ORIGINAL MICRODUCK / NO RETROFIT</span><span>SIMULATION TESTED · PHYSICAL BUILD PENDING</span>';document.body.append(footer);
   api.scene.background.set('#f5f1e8');
   api.renderer.toneMapping=THREE.ACESFilmicToneMapping;api.renderer.toneMappingExposure=1;
   const grid=api.scene.children.find(o=>o.type==='GridHelper');if(grid)grid.visible=false;

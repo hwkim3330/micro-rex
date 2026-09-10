@@ -1,8 +1,18 @@
-[![Micro Rex — 실제 CAD로 렌더링한 두 발 공룡](artifacts/readme_hero.png)](https://hwkim3330.github.io/micro-rex/web/)
+# MICRODUCK 원본으로 복귀
 
-# MICRO REX
+[![Microduck 원본 모델](artifacts/readme_hero.png)](https://hwkim3330.github.io/micro-rex/web/)
 
-큰 눈, 작은 앞발, 긴 꼬리. **Microduck의 14개 관절과 공식 보행 가중치를 유지하는 작은 티렉스**를 만듭니다. 이미지는 아래에서 내려받는 실제 모델입니다.
+현재 기본 화면은 **공룡 외장을 제거한 Microduck 원본**입니다. 원본 14개 관절과 공식 가중치의 계산 기록을 유지합니다. 이전 Micro Rex 외장은 비교 메뉴와 설계 기록으로 보존합니다.
+
+원본 하드웨어의 비상업 조건은 그대로이며, 별도 상업용 독자 설계 [Micro X](https://github.com/hwkim3330/micro-x)의 권리 범위와 혼동하지 않습니다.
+
+[원본 3D 보기](https://hwkim3330.github.io/micro-rex/web/) · [원본 외형 GLB](models/microduck_original.glb) · [원본 모델·자산](vendor/microduck/)
+
+## 이전 Micro Rex 외장 기록
+
+
+
+큰 눈, 작은 앞발, 긴 꼬리. **Microduck의 14개 관절과 공식 보행 가중치를 유지하는 작은 티렉스**를 만듭니다. 이 절은 이전 외장 설계 기록입니다.
 
 [3D 모델 돌려보기](https://hwkim3330.github.io/micro-rex/) · [도면 PDF](drawings/Micro_Rex_Drawings.pdf) · [STEP 조립 파일](models/micro_rex_retrofit.step) · [GLB 전체 모델](models/micro_rex.glb) · [출력 STL](models/print/) · [검증 보고서](artifacts/validation.json)
 
